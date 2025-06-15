@@ -88,6 +88,69 @@ if (itCompanies.includes(CompanyToSearch)) {
   console.log(CompanyToSearch + " is not present in the array."); // declaratin mein spaceing aur yaha bhi spacing ka dhiyan rakhna hai
 }
 
+//! Filter out companies which have more than one 'o' without the filter method.
+let companiesWithMoreThanOneo = [];
+
+for (let i = 0; i < itCompanies.length; i++) {
+  let company = itCompanies[i]; // get individual company
+
+  let oCount = company.toLowerCase().split("o").length - 1;
+
+  if (oCount > 1) {
+    companiesWithMoreThanOneo.push(company); // push this company
+  }
+}
+
+console.log("Companies with more than one 'o':", companiesWithMoreThanOneo);
 
 
+//! Sort the array using sort() method.
 
+itCompanies.sort();
+console.log(itCompanies)
+
+//! Reverse the array using reverse() method
+
+
+itCompanies.reverse();
+console.log(itCompanies);
+
+//! Slice out the first 3 companies from the array
+
+let FirstThree = itCompanies.slice(0,3);
+console.log(FirstThree)
+
+//! Slice out the last 3 companies from the array
+
+let lastThree = itCompanies.slice(-3);
+console.log(lastThree)
+
+//! Slice out the middle IT company or companies from the array
+
+let Middle = []
+let MidIndex = Math.floor(itCompanies.length/2);
+
+// Since the length is 7 (odd), we take 1 middle company
+Middle = itCompanies.slice(MidIndex,MidIndex + 1)
+
+console.log("The Middle company is ", Middle)
+
+//! Remove the middle IT company or companies from the array.
+
+let midIndex1 = Math.floor(itCompanies.length / 2); // 3 for 7 items
+
+
+itCompanies.splice(midIndex1, 1);
+
+console.log(itCompanies);
+
+
+//! Remove the last IT company from the array.
+
+itCompanies.pop();
+console.log(itCompanies);
+
+//! Remove all IT companies
+
+itCompanies = [];
+console.log(itCompanies);
