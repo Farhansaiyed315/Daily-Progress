@@ -44,3 +44,19 @@ console.log(mixedDataTypes);
  let sentence = itCompanies.join(", ");
  console.log(sentence);
 
+//!  14. Filter out companies which have more than one 'o' without using the filter method======
+
+let companiesWithMoreThanOneo = []
+
+for(let i = 0; i< itCompanies.length ; i++){
+   let company = itCompanies[i];
+
+   let oCount = company.toLowerCase().split("o").length - 1;
+
+   if (oCount > 1){
+      companiesWithMoreThanOneo.push(company);
+   }
+
+}
+
+console.log ("Comapnies with more than one o ", companiesWithMoreThanOneo);
