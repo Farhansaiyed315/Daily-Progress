@@ -60,3 +60,47 @@ for(let i = 0; i< itCompanies.length ; i++){
 }
 
 console.log ("Comapnies with more than one o ", companiesWithMoreThanOneo);
+
+//! Slice out the first 3 companies from the array
+
+let FirstThree = itCompanies.slice(0,3)
+console.log("The first the companies which were sliced are ", FirstThree)
+
+//! Slice out the last 3 companies from the array
+
+let lastThreecompany = itCompanies.slice(-3);
+console.log("The last theree companies which were sliced are ",lastThreecompany);
+
+
+
+//! Slice out the middle IT company or companies from the array
+
+let Middle = [];
+
+let MidIndex = Math.floor(itCompanies.length/2)
+Middle = itCompanies.slice(MidIndex,MidIndex+1)
+
+console.log("The MIddle company is ", Middle)
+
+
+//! Remove the first company from the array. 
+
+//?  shift() can only remove the first element — it's not made for removing elements at other positions.
+
+let firstCompanyTORemove = itCompanies.shift(); 
+console.log("The first company we removed is ", firstCompanyTORemove) 
+
+//! Remove the last IT company from the array.
+
+itCompanies.pop();
+console.log(itCompanies);
+
+
+//! Remove all IT companies
+
+itCompanies = [];
+console.log(itCompanies);
+
+
+
+

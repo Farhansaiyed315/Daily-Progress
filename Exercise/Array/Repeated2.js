@@ -23,16 +23,34 @@ let itCompanies = [
 
 // console.log("Companies with more than one o ", companiesWithMoreThanOneo);
 
-companiesWithMoreThanOneo = [];
+// companiesWithMoreThanOneo = [];
 
-for (let i = 0; i < itCompanies.length; i++) {
-  let company = itCompanies[i];
+// for (let i = 0; i < itCompanies.length; i++) {
+//   let company = itCompanies[i];
 
-  let oCount = company.toLowerCase().split("o").length - 1;
+//   let oCount = company.toLowerCase().split("o").length - 1;
 
-  if (oCount > 1) {
-    companiesWithMoreThanOneo.push(company);
-  }
-}
+//   if (oCount > 1) {
+//     companiesWithMoreThanOneo.push(company);
+//   }
+// }
 
-console.log("Companies with more than one o ", companiesWithMoreThanOneo);
+// console.log("Companies with more than one o ", companiesWithMoreThanOneo);
+
+
+
+// companiesWithMoreThanOneo = [];
+
+// for(let i = 0; i< itCompanies.length; i++){
+//  let  company = itCompanies[i]
+
+//  let oCount = company.toLowerCase().split("o").length-1;
+
+//  if (oCount > 1){
+//   companiesWithMoreThanOneo.push(company);
+//  }
+// }
+
+
+// console.log("Companies with more than one o ",companiesWithMoreThanOneo);
+
