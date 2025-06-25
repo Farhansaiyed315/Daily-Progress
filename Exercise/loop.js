@@ -36,3 +36,55 @@ for (let i = 1; i <= num; i++) {
   fact *= i;
 }
 console.log(`Factorial of ${num} is: ${fact}`);
+
+
+//! Print all prime numbers between 1 and 100 using loops.
+for (let num = 2; num <= 100; num++) {
+  let isPrime = true;
+
+  // check divisibility from 2 to num - 1
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(num);
+  }
+}
+
+//! Check if a string is a palindrome using a loop (no built-in reverse).
+function isPalindrome(str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false; // mismatch found
+    }
+  }
+  return true; // all matched
+}
+
+// Example usage
+console.log(isPalindrome("madam"));     // true
+console.log(isPalindrome("racecar"));   // true
+console.log(isPalindrome("hello"));     // false
+
+
+//!  (Using Built-in reverse())
+function isPalindrome(str) {
+  // Step 1: Clean the string (remove spaces and make lowercase)
+  str = str.toLowerCase().replace(/\s+/g, '');
+
+  // Step 2: Reverse the string
+  let reversed = str.split('').reverse().join('');
+
+  // Step 3: Compare original and reversed
+  return str === reversed;
+}
+
+// Test cases
+console.log(isPalindrome("madam"));     // true
+console.log(isPalindrome("hello"));     // false
+console.log(isPalindrome("Racecar"));   // true
+console.log(isPalindrome("Was it a car or a cat I saw")); // true
