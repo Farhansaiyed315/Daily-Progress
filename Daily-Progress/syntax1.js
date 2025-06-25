@@ -95,3 +95,42 @@ let person = {
 console.log(person)
 console.log(person.name)
 console.log(person.greet()); 
+
+
+// Dom Basics.
+
+document.getElementsById("id");
+document.queryselector(".class");
+document.queryselectorAll("p");
+
+let btn = document.queryselector("button");
+btn.addEventListener("click",() => {
+    alert("clicked");
+});
+
+// Ec6 features. 
+let name = "Farhan";
+let msg = `hi my name is ${name}`; // Template string
+console.log(msg)
+
+
+let person = { name: "Farhan", age: 21 };
+let { name: newName, age: myage } = person; // Destructuring
+console.log(person);
+
+
+let arr = [1, 2, 3];
+let newArr = [...arr, 4, 5]; // Spread operator
+console.log(newArr);
+
+
+function add(a = 1, b = 3) {
+    return a + b;
+}
+console.log("The addition of two numbers is ", add());
+
+try{
+    let res = riskyfunction();
+} catch(error){
+    console.log("Error:",error)
+}
