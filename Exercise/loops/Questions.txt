@@ -1,0 +1,66 @@
+// 🌟 JavaScript Loop Questions – Beginner to Advanced
+
+// 🟢 Beginner Level (1–10)
+
+// 1. What is a loop? Why do we use loops in JavaScript?
+
+// 2. Write a program to print numbers from 1 to 10 using a for loop.
+
+// 3. Write a program to print even numbers from 1 to 20 using a while loop.
+
+// 4. What is the syntax of for, while, and do-while loops?
+
+// 5. What is the difference between while and do-while loops?
+
+// 6. Write a program to calculate the sum of numbers from 1 to 100 using a loop.
+
+// 7. Write a program to print multiplication table of any number (e.g., 7).
+
+// 8. Use a for loop to print all elements of an array.
+
+// 9. Write a program to reverse the elements of an array using a loop.
+
+// 10. What is an infinite loop? Give an example (but comment it).
+
+
+// 🟡 Intermediate Level (11–18)
+
+// 11. Write a program to print only odd numbers from 1 to 50 using continue.
+
+// 12. How does the `break` statement work inside a loop? Show an example.
+
+// 13. Write a program to find the factorial of a number using a loop.
+
+// 14. Write a program that checks if a number is prime using a loop.
+
+// 15. Loop through an object using for...in and print all key-value pairs.
+
+// 16. Loop through an array using for...of and print each element.
+
+// 17. Write a program that counts how many even numbers are in an array.
+
+// 18. What is nested loop? Print the following pattern using nested for loop:
+        // *
+        // * *
+        // * * *
+        // * * * *
+        // * * * * *
+
+
+// 🔴 Advanced Level (19–25)
+
+// 19. Use a loop to remove all falsy values from an array 
+//     (e.g., false, 0, '', null, undefined, NaN).
+
+// 20. Create a loop that checks each student's mark in an array,
+//     and prints "Pass" if marks >= 40, else "Fail".
+
+// 21. Write a program to find the largest number in an array using a loop.
+
+// 22. Write a program to count vowels in a string using a for loop.
+
+// 23. Generate a Fibonacci series of `n` terms using a loop.
+
+// 24. Write a loop that finds duplicate elements in an array.
+
+// 25. Create a nested loop that prints multiplication tables from 1 to 10.
