@@ -1,4 +1,4 @@
-// 1. What is an object in JavaScript? Give an example.
+//! 1. What is an object in JavaScript? Give an example.
  
 //! 2. How do you create an object using object literal syntax?
 // const student = {
