@@ -1,0 +1,60 @@
+// 🌟 JavaScript DOM Questions – Beginner to Advanced
+
+// 🟢 Beginner Level (1–10)
+
+// 1. What is the DOM in JavaScript? Explain in simple terms.
+
+// 2. What is the difference between HTML and the DOM?
+
+// 3. How do you access an element using getElementById()?
+
+// 4. How do you select elements using querySelector() and querySelectorAll()?
+
+// 5. Write a program to change the text of a paragraph when a button is clicked.
+
+// 6. How do you change the background color of a div using JavaScript?
+
+// 7. What is innerText vs innerHTML vs textContent?
+
+// 8. How do you create a new element and add it to the DOM?
+
+// 9. Write code to remove an element from the DOM using JavaScript.
+
+// 10. What is the difference between `onclick` in HTML and addEventListener in JS?
+
+
+// 🟡 Intermediate Level (11–18)
+
+// 11. How do you handle a form submission using JavaScript?
+
+// 12. Create a simple todo app that allows adding and deleting list items dynamically.
+
+// 13. How do you get and set the value of input fields using JavaScript?
+
+// 14. How to change CSS styles of an element using JavaScript?
+
+// 15. Explain event bubbling and event capturing with a code example.
+
+// 16. What are event listeners? How do you add and remove them?
+
+// 17. What is the difference between preventDefault() and stopPropagation()?
+
+// 18. Write code to show/hide a password field on button click.
+
+
+
+// 🔴 Advanced Level (19–25)
+
+// 19. Create a dropdown menu using JavaScript that toggles on button click.
+
+// 20. How do you dynamically generate cards from an array of objects using DOM methods?
+
+// 21. What is the purpose of `dataset` and how do you access data-* attributes?
+
+// 22. Build a form validation system that checks if all fields are filled before submission.
+
+// 23. How do you debounce a function (like search input) while typing using JavaScript?
+
+// 24. Write a JavaScript function that counts and displays the number of characters typed in a textarea.
+
+// 25. Create a modal popup using only HTML, CSS, and JavaScript (no libraries).
