@@ -1,0 +1,19 @@
+1. What is typecasting in Python? Explain with an example.
+
+2. How do you convert a string like "123" into an integer in Python?
+
+3. What will be the output of: int(4.7)? Explain why.
+
+4. How can you convert the integer 100 into a float and into a string?
+
+5. What is the result of int("10") + float("20.5")?
+
+6. What is the output of bool(0), bool(1), bool(""), and bool("Python")?
+
+7. How do you convert a float like 3.14 into a string and find its length?
+
+8. What happens when you try to convert the string "abc" to an integer?
+
+9. Write a function that takes a string and returns it as int, float, or original string based on the content.
+
+10. How do you convert the list [1, 2, 3] to a tuple and a set in Python?
