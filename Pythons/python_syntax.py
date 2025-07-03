@@ -295,7 +295,7 @@ for num in count_up():
 # Request Module (requires 'requests')
 # --------------------------------------
 # pip install requests
-import requests
+# import requests
 # response = requests.get("https://api.github.com")
 # print(response.status_code)
 
