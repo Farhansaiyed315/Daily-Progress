@@ -20,7 +20,7 @@ for colors in colors:
             
             
             # range in loops 
-            # if used only with  one argument it bydefault set start to zero
+            # if used only with  one argument it by default set start to zero
             # with two arguments well you know the rest it will start from your given range and end at your given range or u can say arguents. 
             
             
@@ -29,6 +29,8 @@ for k in range(1 , 9):
     
 for s in range(0, 100, 5):
     print("This is s ka print", s)
+    
+    
     
     
         
