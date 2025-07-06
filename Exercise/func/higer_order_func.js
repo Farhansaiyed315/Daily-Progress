@@ -126,7 +126,7 @@ function countVowels(str) {
   console.log(`Vowel count: ${count}`);
 }
 
-countVowels("Farhan Saiyed");  // Output: Vowel count: 5
+countVowels("Farhan Saiyed");  
 
 
 //? Arrow function. 
@@ -275,5 +275,57 @@ const capitalizeWords = str =>
 
 console.log(capitalizeWords("gen z coders rise up"));
 
+
+
+//! 28. Write a function that returns another function.
+
+function greetUser(name) {
+  return function(message) {
+    return `Hello ${name}, ${message}`;
+  };
+}
+
+
+const greetFarhan = greetUser("Farhan");
+console.log(greetFarhan("welcome to the coding world!"));
+
+
+
+
+
+
+// 29. Write a function that takes a function and applies it to all elements of an array.
+
+function applyToAll(arr, func) {
+  return arr.map(func);
+}
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+function square(x) {
+  return x * x;
+}
+
+const squaredNumbers = applyToAll(numbers, square);
+console.log(squaredNumbers);
+
+
+
+
+
+
+//! 30. Write a pure function that takes an array and returns a new sorted array.
+
+function getSortedArray(arr) {
+  return [...arr].sort((a, b) => a - b); // ascending order
+}
+
+// Example usage:
+const numbers = [5, 2, 9, 1, 7];
+const sorted = getSortedArray(numbers);
+
+console.log("Original:", numbers);
+console.log("Sorted:", sorted);
 
 
