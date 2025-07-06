@@ -598,3 +598,200 @@ for (const subject in studentMarks) {
 
 console.log("Total Marks:", total);
 
+
+
+
+
+
+
+//? ----------------------------- WHILE LOOP ----------------------------------------------------
+
+//! Q1: Use a while loop to print numbers from 1 to 10.
+
+let i = 1;
+
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+
+
+
+
+
+
+
+
+//! Q2: Create a while loop to print even numbers between 1 and 20.
+
+let num = 1;
+
+while (num <= 20) {
+  if (num % 2 === 0) {
+    console.log(num);
+  }
+  num++;
+}
+
+
+
+
+
+
+
+
+//! Q3: Use a while loop to calculate the sum of numbers from 1 to 100.
+
+let i = 1;
+let sum = 0;
+
+while (i <= 100) {
+  sum += i;
+  i++;
+}
+
+console.log("Sum from 1 to 100:", sum);
+
+
+
+
+
+
+
+//! Q4: Write a while loop to print the multiplication table of 5 (from 5 × 1 to 5 × 10).
+
+let i = 1;
+
+while (i <= 10) {
+  console.log(`5 × ${i} = ${5 * i}`);
+  i++;
+}
+
+
+
+
+
+
+
+
+
+//! Q5: Use a while loop to print all characters of a string "JavaScript" one by one.
+
+const str = "JavaScript";
+let i = 0;
+
+while (i < str.length) {
+  console.log(str[i]);
+  i++;
+}
+
+
+
+
+
+
+
+
+//! Q6: Create a while loop to reverse the digits of a number (e.g., 1234 → 4321).
+
+let num = 1234;
+let reversed = 0;
+
+while (num !== 0) {
+  let digit = num % 10;
+  reversed = reversed * 10 + digit;
+  num = Math.floor(num / 10);
+}
+
+console.log("Reversed Number:", reversed);
+
+
+
+
+
+
+
+
+
+
+//! Q7: Use a while loop to count how many digits are in a number (e.g., 9876 has 4 digits).
+
+let num = 9876;
+let count = 0;
+
+while (num !== 0) {
+  num = Math.floor(num / 10);
+  count++;
+}
+
+console.log("Total digits:", count);
+
+
+
+
+
+
+
+
+
+
+//! Q8: Write a while loop that keeps asking the user to enter a number until they enter 0 (assume input is given).
+
+let number = prompt("Enter a number (0 to stop):");
+
+while (parseInt(number) !== 0) {
+  console.log("You entered:", number);
+  number = prompt("Enter another number (0 to stop):");
+}
+
+console.log("Loop ended because you entered 0.");
+
+
+
+
+
+
+
+
+
+
+
+//! Q9: Use a while loop to find the factorial of a number (e.g., 5! = 120).
+
+let num = 5;
+let factorial = 1;
+
+while (num > 0) {
+  factorial *= num;
+  num--;
+}
+
+console.log("Factorial:", factorial);
+
+
+
+
+
+
+
+
+
+//! Q10: Use a while loop to print the Fibonacci sequence up to the 10th term.
+
+let n = 10;
+let a = 0, b = 1;
+let count = 1;
+
+while (count <= n) {
+  console.log(a);
+  let next = a + b;
+  a = b;
+  b = next;
+  count++;
+}
+
+
+
+//? ------------------------------ DO WHILE LOOP ----------------------------------------------
+
+
