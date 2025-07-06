@@ -1,5 +1,17 @@
-1. array
-2. coditionals
-3. if-else
-4. function
-5. 
+1. ConsoleObjectModel
+2. Boolean
+3. Conditionals
+4. Loops
+5. Functions
+6. HigerOrderFunction (Higher Order Functions)
+7. Callbackfunc
+
+🔄 Intermediate Core Concepts
+
+8.  Array
+9.  String
+10. Objects
+11. Destructor
+12. Sets\_Maps
+13. ErrorHandling
+
