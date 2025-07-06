@@ -1,3 +1,17 @@
+
+| Loop Type    | Category   | Best Used For                             |
+| ------------ | ---------- | ----------------------------------------- |
+| `for`        | for loop   | Repeating a fixed number of times         |
+| `for...of`   | for loop   | Looping over array or string values       |
+| `for...in`   | for loop   | Looping over object keys                  |
+| `while`      | while loop | Repeating while condition is true         |
+| `do...while` | while loop | Runs at least once, then checks condition |
+| `forEach()`  | method     | Running code for each item in an array    |
+
+
+
+
+
 // 🌟 JavaScript Loop Questions – Beginner to Advanced
 
 // 🟢 Beginner Level (1–10)
