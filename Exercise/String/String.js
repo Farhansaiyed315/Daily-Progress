@@ -15,10 +15,10 @@
 //! 3. How do you find the length of a string?
 
 // let name = "Farhan";
-// console.log(name.length);  // Output: 6
+// console.log(name.length);  
 
 // let name = "Farhan";
 
-// console.log(name[0]);  // F
-// console.log(name[1]);  // a
-// console.log(name[5]);  // n
+// console.log(name[0]);  
+// console.log(name[1]);  
+// console.log(name[5]);  

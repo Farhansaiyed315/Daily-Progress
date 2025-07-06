@@ -1,0 +1,5 @@
+1. array
+2. coditionals
+3. if-else
+4. function
+5. 
