@@ -179,7 +179,7 @@ showUser(user);
 
 //! 10. How do you swap two variables using array destructuring?
 
-// ✅ You can swap values of two variables easily using array destructuring.
+// You can swap values of two variables easily using array destructuring.
 
 let a = 5;
 let b = 10;
