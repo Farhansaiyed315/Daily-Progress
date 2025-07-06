@@ -5,7 +5,7 @@
 
 const fruits = ['apple', 'banana', 'mango'];
 
-// 🎯 Without destructuring
+//  Without destructuring
 // const first = fruits[0];
 // const second = fruits[1];
 
@@ -37,7 +37,7 @@ console.log(third); // 30
 
 const colors = ['red'];
 
-// 🛠️ Destructuring with default values
+//  Destructuring with default values
 const [primary = 'blue', secondary = 'green'] = colors;
 
 console.log(primary);   // red (from array)
@@ -55,7 +55,7 @@ const person = {
   city: 'Mumbai'
 };
 
-// 🎯 Destructuring the object
+//  Destructuring the object
 const { name, age, city } = person;
 
 console.log(name); // Farhan
@@ -75,7 +75,7 @@ const user = {
   location: 'India'
 };
 
-// 🎯 Destructuring with variable renaming
+//  Destructuring with variable renaming
 const { username: userName, email: userEmail, location: userLocation } = user;
 
 console.log(userName);     // farhan_saiyed
@@ -186,7 +186,7 @@ let b = 10;
 
 console.log('Before Swap:', a, b); // 5 10
 
-// 🔁 Swapping using destructuring
+// Swapping using destructuring
 [a, b] = [b, a];
 
 console.log('After Swap:', a, b);  // 10 5

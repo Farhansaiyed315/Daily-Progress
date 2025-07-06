@@ -30,7 +30,7 @@ const greet = function(name) {
 //---------------------------------------------------------------//
 
 
-// Arrow Function (ES6+)
+// 3.  Arrow Function (ES6+)
 // A modern, shorter syntax for writing functions.
 
 // Features:

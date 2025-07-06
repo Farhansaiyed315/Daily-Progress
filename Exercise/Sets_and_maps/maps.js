@@ -18,15 +18,19 @@ console.log(myMap.get("name")); // "Farhan"
 // | Performance           | Better for frequent ops           | Slower for key-heavy ops             |
 // | Prototype Pollution   | Safe                              | Can be unsafe (inherited props)      |
 
+
+
 // Example: Object as a key in Map
 const objKey = { id: 1 };
 myMap.set(objKey, "Value for object key");
-console.log(myMap.get(objKey)); // "Value for object key"
+console.log("Value for object key",myMap.get(objKey)); 
+
+
 
 // Using object as key in normal object
 const myObj = {};
 myObj[objKey] = "Oops";
-console.log(myObj[objKey]); // "[object Object]"
+console.log(myObj[objKey]); 
 
 // When to use what:
 // - Use Map: if keys are not just strings, and you need performance or order
@@ -50,7 +54,7 @@ myMap.set('isStudent', true);
 console.log(myMap);
 
 // Access a value using get()
-console.log(myMap.get('name')); // Output: Farhan
+console.log(myMap.get('name'));
 
 
 
@@ -186,9 +190,6 @@ myMap.clear();
 // Check if Map is now empty
 console.log(myMap.size); 
 console.log(myMap); 
-
-
-
 
 
 

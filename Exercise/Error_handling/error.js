@@ -7,7 +7,7 @@
 // JavaScript provides tools like `try...catch` to handle these errors gracefully.
 
 try {
-  let result = x + 5; // ❌ x is not defined
+  let result = x + 5; //  x is not defined
 } catch (error) {
   console.log("Something went wrong: " + error.message);
 }
@@ -20,7 +20,7 @@ try {
 // 4. Helps control app flow – You can decide what happens next after an error.
 // 5. Increases security – Prevents exposing sensitive system info to users.
 
-//! 🧪 Real-life Example:
+//!  Real-life Example:
 
 try {
   loginUser(email, password);
@@ -39,16 +39,16 @@ try {
 // It allows us to "try" running a block of code, and "catch" any error that occurs,
 // so that the app doesn't crash and can handle the error smoothly.
 
-//! 🔹 Syntax:
+//!  Syntax:
 try {
   // Code that might throw an error
 } catch (error) {
   // Code to handle the error
 }
 
-//! 🔹 Example:
+//!  Example:
 try {
-  let result = 10 / x; // ❌ x is not defined
+  let result = 10 / x; //  x is not defined
 } catch (err) {
   console.log("Error caught:", err.message); // Output: Error caught: x is not defined
 }
@@ -91,8 +91,8 @@ try {
 
 try {
   console.log("Start");
-  let result = x + 10; // ❌ x is not defined (ReferenceError)
-  console.log("This will not run"); // ❌ Skipped due to error
+  let result = x + 10; //  x is not defined (ReferenceError)
+  console.log("This will not run"); //  Skipped due to error
 } catch (error) {
   console.log("Caught an error:", error.message);
 }
@@ -126,7 +126,7 @@ try {
 //! 🔹 Example:
 
 try {
-  let a = b + 10; // ❌ b is not defined (ReferenceError)
+  let a = b + 10; //  b is not defined (ReferenceError)
 } catch (err) {
   console.log("Error caught:", err.message);
 }
@@ -162,7 +162,7 @@ try {
 
 try {
   let x = 5;
-  let y = x + z; // ❌ z is not defined
+  let y = x + z; //  z is not defined
 } catch (err) {
   console.log("Caught an error:", err.message);
 } finally {

@@ -9,8 +9,8 @@
 const mySet = new Set();
 mySet.add(1);
 mySet.add(2);
-mySet.add(2); // Duplicate, will be ignored
-console.log(mySet); 
+mySet.add(2); 
+console.log(" Duplicate, will be ignored",mySet); 
 
 // Difference between Set and Array:
 // - Array can have duplicate values, Set cannot.
@@ -20,7 +20,7 @@ console.log(mySet);
 
 // Example of Array:
 const myArray = [1, 2, 2];
-console.log(myArray); // Output: [1, 2, 2]
+console.log(myArray); 
 
 
 
@@ -35,8 +35,8 @@ const emptySet = new Set();
 console.log(emptySet); // Output: Set(0) {}
 
 // Method 2: Create a Set with initial values
-const numberSet = new Set([1, 2, 3, 4, 4]); // duplicate 4 will be removed
-console.log(numberSet); 
+const numberSet = new Set([1, 2, 3, 4, 4]); 
+console.log("duplicate 4 will be removed",numberSet); 
 
 // You can add values later using add()
 numberSet.add(5);
@@ -54,9 +54,9 @@ const fruits = new Set();
 // Adding elements
 fruits.add("apple");
 fruits.add("banana");
-fruits.add("apple"); // Duplicate, will be ignored
+fruits.add("apple"); 
 
-console.log(fruits); 
+console.log("Duplicate, will be ignored",fruits); 
 
 // You can chain .add() methods
 fruits.add("mango").add("grape");
@@ -103,8 +103,8 @@ const languages = new Set(["JavaScript", "Python", "C++", "Java"]);
 
 console.log(languages.size); 
 
-languages.add("Java"); // duplicate, won't increase size
-console.log(languages.size); 
+languages.add("Java");  
+console.log("duplicate, won't increase size",languages.size); 
 
 
 
@@ -119,9 +119,8 @@ const nums = new Set();
 
 nums.add(10);
 nums.add(20);
-nums.add(10); // Duplicate, will be ignored
-
-console.log(nums); 
+nums.add(10);  
+console.log("Duplicate, will be ignored",nums); 
 
 
 
@@ -151,11 +150,11 @@ const setExample = new Set([1, 2, 3, 4]);
 
 // Method 1: Using spread operator
 const array1 = [...setExample];
-console.log(array1); // Output: [1, 2, 3, 4]
+console.log(array1); 
 
 // Method 2: Using Array.from()
 const array2 = Array.from(setExample);
-console.log(array2); // Output: [1, 2, 3, 4]
+console.log(array2); 
 
 
 
@@ -168,7 +167,7 @@ const cities = new Set(["Mumbai", "Delhi", "Pune"]);
 
 console.log(cities.size); 
 
-cities.clear(); // Removes all items
+cities.clear(); 
 
 console.log(cities.size); 
 console.log(cities); 
