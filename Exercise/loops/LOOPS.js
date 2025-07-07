@@ -792,6 +792,209 @@ while (count <= n) {
 
 
 
+
+
+
+
+
+
+
 //? ------------------------------ DO WHILE LOOP ----------------------------------------------
 
 
+//! Q1: Use a do...while loop to print numbers from 1 to 5.
+
+let i = 1;
+
+do {
+  console.log(i);
+  i++;
+} while (i <= 5);
+
+
+
+
+
+
+
+
+
+//! Q2: Write a do...while loop to print the multiplication table of 7 (from 7 × 1 to 7 × 10).
+
+let i = 1;
+
+do {
+  console.log(`7 × ${i} = ${7 * i}`);
+  i++;
+} while (i <= 10);
+
+
+
+
+
+
+
+
+
+
+//! Q3: Use a do...while loop to print all even numbers from 2 to 20.
+
+let num = 2;
+
+do {
+  console.log(num);
+  num += 2;
+} while (num <= 20);
+
+
+
+
+
+
+
+
+
+
+//! Q4: Create a do...while loop that prints the reverse of a string "hello".
+
+const str = "hello";
+let i = str.length - 1;
+
+do {
+  console.log(str[i]);
+  i--;
+} while (i >= 0);
+
+
+
+
+
+
+
+
+
+
+
+//! Q5: Write a do...while loop that adds numbers from 1 to 50 and prints the total sum.
+
+let i = 1;
+let sum = 0;
+
+do {
+  sum += i;
+  i++;
+} while (i <= 50);
+
+console.log("Total Sum:", sum);
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q6: Use a do...while loop to count down from 10 to 1.
+
+let i = 10;
+
+do {
+  console.log(i);
+  i--;
+} while (i >= 1);
+
+
+
+
+
+
+
+
+
+
+//! Q7: Write a do...while loop that prints a message "Welcome!" 3 times.
+
+let count = 1;
+
+do {
+  console.log("Welcome!");
+  count++;
+} while (count <= 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q8: Use a do...while loop to calculate the factorial of a number (e.g., 4! = 24).
+
+let num = 4;
+let factorial = 1;
+let i = 1;
+
+do {
+  factorial *= i;
+  i++;
+} while (i <= num);
+
+console.log(`Factorial of ${num} is:`, factorial);
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q9: Create a do...while loop that keeps running until a random number is greater than 0.9 (use Math.random()).
+
+let randomNumber;
+
+do {
+  randomNumber = Math.random();
+  console.log("Generated:", randomNumber);
+} while (randomNumber <= 0.9);
+
+console.log("Loop stopped. Final number > 0.9:", randomNumber);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q10: Write a do...while loop that keeps asking the user for a password until the correct one is entered (assume input is given).
+
+const correctPassword = "admin123";
+let input;
+
+do {
+  input = prompt("Enter password:");
+} while (input !== correctPassword);
+
+console.log("Access granted!");
