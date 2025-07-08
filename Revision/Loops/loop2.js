@@ -183,3 +183,63 @@ for(const booo of bools){
 }
 
 console.log("Number of values are ",trueCount )
+
+
+
+
+
+//? ----------------------------  FOR EACH LOOP  -----------------------------------
+
+
+
+
+//! Q1: Use forEach to print each element in the array [1, 2, 3, 4, 5].
+
+
+const numbers = [1,2,3,4,5,6];
+
+numbers.forEach(function(num){
+    console.log(num);
+});
+
+
+
+
+//! Q2: Given an array of names ["Farhan", "Ayaan", "Zoya"], use forEach to greet each person like "Hello, Farhan!".
+
+const namess = ["Farhan", "Ayaan", "Zoya"];
+
+ namess.forEach(function(nem){
+    console.log("Hello",`${nem}`)
+ });
+
+
+ 
+//! Q3: Use forEach to double each number in the array [10, 20, 30] and print the result.
+
+
+const num1 =  [10, 20, 30];
+num1.forEach(function(d){
+    console.log( d * 2)
+});
+
+
+
+
+//! Q4: Given an array of strings ["pen", "pencil", "eraser"], use forEach to print the length of each string.
+
+// const pen = ["pen", "pencil", "eraser"];
+
+// pen.forEach(function(p){
+//     console.log(p.length)
+// });
+
+
+
+const items = ["pen", "pencil", "eraser"];
+
+items.forEach(function(item) {
+  console.log(`${item} has length: ${item.length}`);
+});
+
+
