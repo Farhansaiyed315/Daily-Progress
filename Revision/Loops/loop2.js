@@ -520,6 +520,75 @@ console.log("Total Marks:", total);
 
 //? ----------------------------- WHILE LOOP ----------------------------------------------------
 
+//! Q1: Use a while loop to print numbers from 1 to 10.
+
+let i = 1;
+
+while (i <= 10 ){
+    console.log(i);
+    i++
+}
+
+
+
+
+//! Q2: Create a while loop to print even numbers between 1 and 20.
+
+let num = 1;
+
+while (num <= 20){
+    if (num % 2 === 0){
+        console.log(num);
+    }
+    num++;
+}
+
+
+
+
+//! Q3: Use a while loop to calculate the sum of numbers from 1 to 100.
+
+
+let i = 1;
+let sum = 0;
+
+while (i<= 100){
+    sum+=i;
+    i++;
+}
+
+
+console.log("sum from 1 to 100 ", sum );
+
+
+
+
+//! Q4: Write a while loop to print the multiplication table of 5 (from 5 × 1 to 5 × 10).
+
+
+let i = 1;
+
+while (i <= 10){
+    console.log(`5 x ${i} = ${5 * i}`);
+    i++;
+}
+
+
+
+
+//! Q5: Use a while loop to print all characters of a string "JavaScript" one by one.
+
+
+
+const str = "javascipt";
+let i = 0;
+
+while ( i < str.longht){
+    console.log(str[i]);
+    i++;
+}
+
+
 
 
 

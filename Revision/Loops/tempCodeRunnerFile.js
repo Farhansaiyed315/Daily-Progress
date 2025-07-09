@@ -1,18 +1,8 @@
 
-const studentMarks = {
-  math: 85,
-  english: 78,
-  science: 92,
-  history: 74,
-  computer: 88
-};
+const str = "javascipt";
+let i = 0;
 
-
-
-let total = 0;
-
-for (const subject in studentMarks){
-    total += studentMarks[subject];
+while ( i < str.longht){
+    console.log(str[i]);
+    i++;
 }
-
-console.log("Total Marks:", total);
