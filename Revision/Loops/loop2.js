@@ -414,3 +414,113 @@ const outer = {
 for(const out in outer){
     console.log(out)
 }
+
+
+
+//! Q6: Use for...in to print only the keys of an object, not the values.
+
+
+const chutiya = {
+    name: "wagonr",
+    brand : "brandi",
+    model: 22
+};
+
+for (const key in chutiya){
+    console.log(`${key}`)
+}
+
+
+
+//! Q7: Use a for...in loop to print both keys and values of the object {brand: "Nike", price: 5000, inStock: true}.
+
+
+const projii = {
+    naam: "jojo",
+     brand : "brandi",
+    model: 22
+}
+
+for(const key in projii){
+    console.log(`key is ${key} and value is ${projii[key]}`)
+}
+
+
+
+//! Q8: Create an object with 5 items and use for...in to convert all string values to uppercase.
+
+
+
+
+const user = {
+  name: "farhan",
+  city: "mumbai",
+  profession: "developer",
+  age: 22,
+  country: "india"
+};
+
+
+for (const key in user){
+    if(typeof user[key] === "string"){
+        user[key] = user[key].toUpperCase();
+    }
+}
+
+console.log(user);
+
+
+
+
+
+//! Q9: Use for...in to check if the object {x: 10, y: 20} contains a key named "z".
+
+
+
+const obj = {x: 10, y:20};
+let hasz = false;
+
+for(const key in obj){
+if (key === "z"){
+    hasz = true;
+    break;
+}
+}
+
+console.log("contains key 'z'?",hasz);
+
+
+
+
+//! Q10: Given an object of a student with subjects and marks, use for...in to calculate total marks.
+
+
+
+const studentMarks = {
+  math: 85,
+  english: 78,
+  science: 92,
+  history: 74,
+  computer: 88
+};
+
+
+
+let total = 0;
+
+for (const subject in studentMarks){
+    total += studentMarks[subject];
+}
+
+console.log("Total Marks:", total);
+
+
+
+
+
+//? ----------------------------- WHILE LOOP ----------------------------------------------------
+
+
+
+
+
