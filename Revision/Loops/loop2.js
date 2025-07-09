@@ -138,8 +138,8 @@ for (const innerArray of nestedArray) {
 const students = ["Ali", "Sara", "John"];
 
 
-for(const student of students){
-    console.log("welcome",`${student}`)
+for (const student of students) {
+    console.log("welcome", `${student}`)
 }
 
 
@@ -147,11 +147,11 @@ for(const student of students){
 //! Q8: Create an array of prices [100, 200, 300], then use a for...of loop to apply a 10% discount and print the discounted prices.
 
 
-const prices = [100,200,300];
+const prices = [100, 200, 300];
 
-for (const price of prices){
+for (const price of prices) {
     const dicountedPrice = price - price * 0.10;
-    console.log("dicountedprice",`${dicountedPrice}`)
+    console.log("dicountedprice", `${dicountedPrice}`)
 }
 
 
@@ -161,8 +161,8 @@ for (const price of prices){
 
 const text = "for of loop";
 
-for (const t of text){
-    if(t !== " "){
+for (const t of text) {
+    if (t !== " ") {
         console.log(t)
     }
 }
@@ -176,13 +176,13 @@ for (const t of text){
 const bools = [true, false, true];
 let trueCount = 0;
 
-for(const booo of bools){
-    if(booo === true){
-       trueCount++; 
+for (const booo of bools) {
+    if (booo === true) {
+        trueCount++;
     }
 }
 
-console.log("Number of values are ",trueCount )
+console.log("Number of values are ", trueCount)
 
 
 
@@ -196,9 +196,9 @@ console.log("Number of values are ",trueCount )
 //! Q1: Use forEach to print each element in the array [1, 2, 3, 4, 5].
 
 
-const numbers = [1,2,3,4,5,6];
+const numbers = [1, 2, 3, 4, 5, 6];
 
-numbers.forEach(function(num){
+numbers.forEach(function (num) {
     console.log(num);
 });
 
@@ -209,18 +209,18 @@ numbers.forEach(function(num){
 
 const namess = ["Farhan", "Ayaan", "Zoya"];
 
- namess.forEach(function(nem){
-    console.log("Hello",`${nem}`)
- });
+namess.forEach(function (nem) {
+    console.log("Hello", `${nem}`)
+});
 
 
- 
+
 //! Q3: Use forEach to double each number in the array [10, 20, 30] and print the result.
 
 
-const num1 =  [10, 20, 30];
-num1.forEach(function(d){
-    console.log( d * 2)
+const num1 = [10, 20, 30];
+num1.forEach(function (d) {
+    console.log(d * 2)
 });
 
 
@@ -238,8 +238,91 @@ num1.forEach(function(d){
 
 const items = ["pen", "pencil", "eraser"];
 
-items.forEach(function(item) {
-  console.log(`${item} has length: ${item.length}`);
+items.forEach(function (item) {
+    console.log(`${item} has length: ${item.length}`);
 });
 
+
+
+
+
+
+
+
+
+//! Q5: Use forEach to calculate the total sum of elements in the array [5, 10, 15, 20].
+
+
+const numbers = [5, 6, 8, 4];
+let sum = 0;
+
+numbers.forEach(function (ni) {
+    sum += ni;
+})
+
+console.log("Total sum", sum);
+
+
+
+
+//! Q6: Given an array of marks [33, 48, 75, 62], use forEach to check and print whether each mark is "pass" (>= 35) or "fail".
+
+
+const mar = [33, 48, 75, 62];
+
+mar.forEach(function (m) {
+    if (m >= 35) {
+        console.log(`${m} = pass`);
+    }
+    else {
+        console.log(`${m} = fail`);
+    }
+});
+
+
+
+
+//! Q7: Use forEach to iterate over an array of objects: [{name: "Ali"}, {name: "Sara"}] and print each name.
+
+const peo = [{ name: "Farhan" }, { name: "kadim" }];
+
+peo.forEach(function (peo) {
+    console.log("The names is ", peo.name);
+});
+
+
+
+//! Q8: Create an array of prices [100, 200, 300]. Use forEach to add ₹50 to each price and print the new price.
+
+
+const pri = [100, 200, 300];
+
+pri.forEach(function (pri) {
+    const newpric = pri + 50;
+    console.log(`new pric : ${newpric}`);
+})
+
+
+
+
+//! Q9: Use forEach to print the index and value of each element in the array ["a", "b", "c"].
+
+
+const lett = ["a", "b", "c"];
+
+lett.forEach(function (value, index) {
+    console.log(`Index: ${index}, value: ${value}`)
+});
+
+
+
+
+//! Q10: Given an array of tasks ["Eat", "Code", "Sleep"], use forEach to print each task in the format: "Task: Eat".
+
+
+const task =  ["Eat", "Code", "Sleep"];
+
+task.forEach(function(tas){
+    console.log(`task ${tas}`);
+})
 
