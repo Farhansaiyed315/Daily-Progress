@@ -591,5 +591,90 @@ while ( i < str.longht){
 
 
 
+//? ------------------------------ DO WHILE LOOP ----------------------------------------------
 
 
+
+//! Q1: Use a do...while loop to print numbers from 1 to 5.
+
+let i = 1;
+ 
+do {
+    console.log(i);
+    i++;
+
+} while (i<= 5);
+
+
+
+
+
+
+//! Q2: Write a do...while loop to print the multiplication table of 7 (from 7 × 1 to 7 × 10).
+
+
+let i = 1;
+
+do {
+    console.log(`7 x ${i} = ${7 * i}`);
+    i++;
+} while(i<=20);
+
+
+
+
+
+
+//! Q3: Use a do...while loop to print all even numbers from 2 to 20.
+
+
+let num = 2;
+
+do {
+    console.log(num);
+    num+=2;
+
+} while (num<= 20);
+
+
+
+
+
+
+//! Q4: Create a do...while loop that prints the reverse of a string "hello".
+
+
+
+
+const str = "hello";
+let i = str.length - 1;
+
+do {
+console.log(str[i]);
+i--;
+
+    
+} while (i >= 0);
+
+
+
+
+
+
+//! Q5: Write a do...while loop that adds numbers from 1 to 50 and prints the total sum.
+
+
+
+
+let i = 1;
+let sum = 0;
+
+do{
+    sum+= i;
+    i++;
+
+} while (i <= 50);
+
+
+
+console.log("Total sum ", sum);
