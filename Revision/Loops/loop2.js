@@ -326,3 +326,91 @@ task.forEach(function(tas){
     console.log(`task ${tas}`);
 })
 
+
+
+
+//?--------------------- FOR IN LOOP ----------------------------------------------
+
+
+
+//! Q1: Use a for...in loop to print all keys in the object {name: "Farhan", age: 21, city: "Mumbai"}.
+
+
+const person = {
+    name:"farhan",
+    age: 21,
+    city:"Mumbai"
+};
+
+for (const key in person){
+    console.log(key);
+};
+
+
+
+
+//! Q2: Given an object {math: 80, english: 70, science: 90}, use for...in to print each subject and its marks.
+
+
+const marks = {
+    math: 80,
+    English: 60,
+    science: 50
+};
+
+for(const mar in marks){
+    console.log(`${mar}:${marks[mar]}`);
+}
+
+
+//! Q3: Use a for...in loop to count how many properties are present in the object {a: 1, b: 2, c: 3}.
+
+
+const obj = {
+    a:1,
+    b:2,
+    c:3,
+    d:4
+};
+
+let count = 0;
+
+for (const key in obj){
+    count++;
+}
+
+console.log("Total properties:", count);
+
+
+
+
+
+//! Q4: Create a for...in loop to copy all properties from one object to another.
+
+
+const source = {
+    name: "Farhan",
+    age: 22,
+    class: "Five"
+};
+
+const target = {};
+
+for(const key in source){
+    target [key] = source [key];
+}
+console.log("copied object:", target);
+
+
+
+//! Q5: Given a nested object like {user: {name: "Ali", age: 22}}, use for...in to print the outer keys.
+
+const outer = {
+    user:{name: "Ali",
+        age: 22
+    }
+};
+
+for(const out in outer){
+    console.log(out)
+}
