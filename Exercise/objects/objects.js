@@ -419,9 +419,9 @@ Object.keys(student).forEach((key) => {
 
 //! 18. What happens if two keys in an object are the same? What value is stored?
 
-//!  If two keys in an object are the same, the **last one overwrites the previous one**
-//! - JavaScript objects can't have duplicate keys
-//! - The latest key-value pair wins during object creation
+//  If two keys in an object are the same, the **last one overwrites the previous one**
+// - JavaScript objects can't have duplicate keys
+// - The latest key-value pair wins during object creation
 
 const user = {
   name: "Farhan",
@@ -430,14 +430,197 @@ const user = {
 
 console.log(user.name); // Output: "Engineer"
 
-//!  Explanation:
-//! - The first key `name: "Farhan"` is overwritten by `name: "Engineer"`
-//! - Only the last value assigned to that key is stored in memory
+//  Explanation:
+// - The first key `name: "Farhan"` is overwritten by `name: "Engineer"`
+// - Only the last value assigned to that key is stored in memory
 
-//!  Summary:
-//! - Duplicate keys are not allowed in objects
-//! - If written, the last one will overwrite previous ones
-//! - Always make sure keys are unique to avoid data loss
+//  Summary:
+// - Duplicate keys are not allowed in objects
+// - If written, the last one will overwrite previous ones
+// - Always make sure keys are unique to avoid data loss
+
+
+
+
+
+
+//!  Q. 19 What are computed property names? Create a dynamic object key using a variable.
+
+// Answer:
+// Computed property names allow us to use a variable or expression as the property key in an object.
+
+// Instead of hardcoding the key, we wrap the variable inside square brackets [] in the object literal.
+
+// This is useful when we want to create dynamic object keys.
+
+
+let key = "name";
+let obj = {
+  [key]: "John"
+};
+console.log(obj); // { name: "John" }
+
+
+let subject = "math";
+let marks = 95;
+
+let result = {
+  [subject]: marks
+};
+
+console.log(result); 
+
+
+
+
+
+//! ✅ Q. 22. Explain prototypal inheritance using an example.
+
+// ✅ Answer:
+// Prototypal inheritance is a feature in JavaScript where one object can inherit
+// properties and methods from another object using its prototype.
+
+// In JavaScript, every object has a hidden property called [[Prototype]] which points
+// to another object. This forms a prototype chain and allows one object to use another’s behavior.
+
+//  Syntax using Object.create():
+const parent = {
+  greet: function () {
+    console.log("Hello from parent");
+  }
+};
+
+const child = Object.create(parent); // child inherits from parent
+
+child.greet(); // Output: Hello from parent
+
+// Even though 'greet' is not defined in 'child',
+// it can still access it from 'parent' through the prototype chain.
+
+
+
+
+
+//  Answer:
+// Object freezing means making an object IMMUTABLE — which means we can't add, delete, or update its properties.
+// JavaScript provides a method called Object.freeze(obj) to freeze an object.
+
+// Once an object is frozen:
+// - We can't change existing property values
+// - We can't add new properties
+// - We can't delete properties
+// - It stays as it is — fully locked 🔒
+
+// ✅ Syntax:
+Object.freeze(objectName);
+
+// ✅ Example:
+const user = {
+  name: "Farhan",
+  age: 21
+};
+
+Object.freeze(user);
+
+user.age = 25;        
+user.city = "Mumbai";
+delete user.name;    
+
+console.log(user);
+
+
+
+//! Q. 23. Create a constructor function and use it to make multiple objects.
+
+//  Answer:
+// A constructor function is a regular function used to create multiple objects with the same structure.
+// It uses the 'this' keyword to assign values, and we call it using the 'new' keyword.
+
+// Constructor Function:
+function Student(name, age, course) {
+  this.name = name;
+  this.age = age;
+  this.course = course;
+  this.sayHello = function () {
+    console.log(`Hi, I'm ${this.name}, and I'm studying ${this.course}.`);
+  };
+}
+
+//  Creating multiple objects using the constructor:
+const student1 = new Student("Farhan", 21, "BCA");
+const student2 = new Student("Aisha", 20, "BSc IT");
+
+student1.sayHello(); // Hi, I'm Farhan, and I'm studying BCA.
+student2.sayHello(); // Hi, I'm Aisha, and I'm studying BSc IT.
+
+console.log(student1); // { name: 'Farhan', age: 21, course: 'BCA', sayHello: [Function] }
+console.log(student2); // { name: 'Aisha', age: 20, course: 'BSc IT', sayHello: [Function] }
+
+
+
+
+//! 24. How do you override a method in a child object that inherits from a parent object?
+
+
+//  Answer:
+// To override a method in a child object, we define a method with the same name in the child.
+// When the method is called on the child, JavaScript uses the child’s version instead of the parent’s.
+
+//Example:
+const parent = {
+  greet: function () {
+    console.log("Hello from parent 👨‍👦");
+  }
+};
+
+// Create child object that inherits from parent
+const child = Object.create(parent);
+
+// Override the greet() method in child
+child.greet = function () {
+  console.log("Hello from child 👶");
+};
+
+// Call the method
+child.greet();  // Output: Hello from child 
+parent.greet(); // Output: Hello from parent 👨‍👦
+
+
+//! 25. Explain the difference between Object.create() and class-based object creation. Give examples.
+
+//  Answer:
+// In JavaScript, we can create objects in two main ways:
+// 1️ Using Object.create()
+// 2️ Using class-based syntax (ES6 classes)
+
+// 🔹 Object.create(): 
+// - Creates a new object and sets its prototype to an existing object.
+// - More manual and flexible (like old-school inheritance).
+
+const parent = {
+  greet: function () {
+    console.log("Hello from parent");
+  }
+};
+
+const child = Object.create(parent); // Inherit from parent
+child.greet(); // Output: Hello from parent
+
+// 🔹 class-based (ES6):
+// - Modern, cleaner, and more structured way of creating objects and inheritance.
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(`Hello, I'm ${this.name}`);
+  }
+}
+
+const user = new Person("Farhan");
+user.greet(); 
 
 
 
