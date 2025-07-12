@@ -76,7 +76,6 @@ for (let key in student) {
 
 
 
-//! 6. Write a function that takes an object and logs all keys and values.
 
 //! 6. Write a function that takes an object and logs all keys and values.
 
