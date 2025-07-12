@@ -1,15 +1,19 @@
 
-const student = {
-  name: "Farhan",
-  age: 21,
-  course: "BCA",
-  address:{
-    street: "MIG COLONY",
-     phone: 8001902596,
-     no: 123456789
-  }
+
+let user1 = {
+    name: "Farhan",
+    address: {
+        city: "Mumbai",
+    },
 };
 
+//! Shallow copy using spread operator.
+let user2 = {...user1};
 
-console.log(student.address.street);
-console.log(student["address"]["phone"]);
+
+user2.name = "Engineer";
+user2.address.city = "Delhi";
+
+
+console.log(user1.name);
+console.log(user1.address.city);

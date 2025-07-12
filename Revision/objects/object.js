@@ -118,17 +118,126 @@ console.log("the name is",student["name"]);
 
 
 
-const student = {
-  name: "Farhan",
-  age: 21,
-  course: "BCA",
-  address:{
-    street: "MIG COLONY",
-     phone: 8001902596,
-     no: 123456789
-  }
+// const student = {
+//   name: "Farhan",
+//   age: 21,
+//   course: "BCA",
+//   address:{
+//     street: "MIG COLONY",
+//      phone: 8001902596,
+//      no: 123456789
+//   }
+// };
+
+
+// console.log(student.address.street);
+// console.log(student["address"]["phone"]);
+
+
+
+
+
+
+
+//! 11. What is the difference between reference and value in the context of objects?     
+
+
+//?  Primitive types => Passed by VALUE (copied)
+//? Objects/Arrays/Functions => Passed by REFERENCE (shared)
+//? Use spread operator or Object.assign() to clone and avoid reference issues
+
+
+
+//? Primitive types are stored and copied by value
+
+// let a = 10;
+// let b = a; 
+
+// b = 20;
+
+
+// console.log(a); 
+// console.log(b); 
+
+
+
+
+//?  Primitive types include: number, string, boolean, null, undefined, symbol, bigint
+
+//? Reference (Non-Primitive Types like Objects, Arrays, Functions)
+
+//? Non-primitive types are stored and copied by reference (memory address)
+
+
+
+
+let obj1 = { name: "Farhan" };
+let obj2 = obj1;
+
+obj2.name = "Engineer";
+
+console.log("the changed name is",obj1.name);
+
+
+
+//? obj1 and obj2 are referencing the same object
+
+
+
+//? Avoiding reference issue - clone the object (shallow copy)
+
+//? Using spread operator
+// let original = { age: 21 };
+// let copy = { ...original };  
+
+// copy.age = 30;
+
+// console.log("The original age is",original.age); 
+
+// console.log("the copied age is",copy.age);
+
+
+
+//! 12. Explain shallow copy vs deep copy with objects. How do you perform both?
+
+
+//?  Shallow Copy:
+//? Copies only the first level of an object.
+//? Nested objects are still referenced (not copied).
+
+
+
+//?  Deep Copy:
+//? Copies everything including nested objects (a full clone, not just top level)
+
+
+
+
+let user1 = {
+    name: "Farhan",
+    address: {
+        city: "Mumbai",
+    },
 };
 
+//? Shallow copy using spread operator.
+let user2 = {...user1};
 
-console.log(student.address.street);
-console.log(student["address"]["phone"]);
+
+user2.name = "Engineer";  //   (not affected)
+user2.address.city = "Delhi";       //    (affected due to shallow copy)
+
+
+console.log(user1.name);
+console.log(user1.address.city);
+
+
+
+
+//?  So, user2.address is still referencing the same object as user1.address
+
+//?  Deep Copy:
+//? Copies everything including nested objects (a full clone, not just top level)
+
+
+
