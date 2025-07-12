@@ -102,7 +102,7 @@
 //! 8. Create an object 'student' with 'name', 'age', and 'marks'. Log 'name' using bracket notation.
 
 
-console.log("the name is",student["name"]);
+// console.log("the name is",student["name"]);
 
 
 
@@ -171,12 +171,12 @@ console.log("the name is",student["name"]);
 
 
 
-let obj1 = { name: "Farhan" };
-let obj2 = obj1;
+// let obj1 = { name: "Farhan" };
+// let obj2 = obj1;
 
-obj2.name = "Engineer";
+// obj2.name = "Engineer";
 
-console.log("the changed name is",obj1.name);
+// console.log("the changed name is",obj1.name);
 
 
 
@@ -213,23 +213,23 @@ console.log("the changed name is",obj1.name);
 
 
 
-let user1 = {
-    name: "Farhan",
-    address: {
-        city: "Mumbai",
-    },
-};
+// let user1 = {
+//     name: "Farhan",
+//     address: {
+//         city: "Mumbai",
+//     },
+// };
 
 //? Shallow copy using spread operator.
-let user2 = {...user1};
+// let user2 = {...user1};
 
 
-user2.name = "Engineer";  //   (not affected)
-user2.address.city = "Delhi";       //    (affected due to shallow copy)
+// user2.name = "Engineer";  //   (not affected)
+// user2.address.city = "Delhi";       //    (affected due to shallow copy)
 
 
-console.log(user1.name);
-console.log(user1.address.city);
+// console.log(user1.name);
+// console.log(user1.address.city);
 
 
 
@@ -241,3 +241,34 @@ console.log(user1.address.city);
 
 
 
+
+
+//! 13. What is the purpose of 'this' keyword inside an object method?
+
+//! Purpose:
+//? The `this` keyword refers to the **object that is calling the method**.
+//? It's used to access properties and methods of the same object from inside its method.
+//? 
+//? It's used to access properties and methods of the same object from inside its method.
+
+
+
+let student = {
+    name: "Farhan",
+    age: 21,
+
+    //! Method using `this`
+    greet: function(){
+        console.log("Helllo my name is " + this.name + " and I am " + this.age + "years old.");
+    }
+}
+student.greet();
+
+
+
+//?  Explanation:
+//? - `this.name` refers to student.name
+//? - `this.age` refers to student.age
+
+//?  Without `this`, you'd need to hardcode or restructure the code.
+//? `this` makes it dynamic and reusable inside the object.

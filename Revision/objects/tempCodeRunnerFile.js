@@ -1,19 +1,12 @@
 
-
-let user1 = {
+let student = {
     name: "Farhan",
-    address: {
-        city: "Mumbai",
-    },
-};
+    age: 21,
 
-//! Shallow copy using spread operator.
-let user2 = {...user1};
+    //! Method using `this`
+    greet: function(){
+        console.log("Helllo my name is " + this.name + " and I am " + this.age + "years old.");
+    }
+}
+student.greet();
 
-
-user2.name = "Engineer";
-user2.address.city = "Delhi";
-
-
-console.log(user1.name);
-console.log(user1.address.city);

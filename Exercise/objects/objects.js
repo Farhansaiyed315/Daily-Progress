@@ -234,7 +234,7 @@ user2.address.city = "Delhi";  // changes in both
 
 console.log(user1.name);        // Farhan  (not affected)
 console.log(user1.address.city); // Delhi  (affected due to shallow copy)
-
+ 
 //!  So, user2.address is still referencing the same object as user1.address
 
 //!  Deep Copy:
@@ -272,6 +272,8 @@ console.log(user4.address.city); // Pune
 //! Purpose:
 //! The `this` keyword refers to the **object that is calling the method**.
 //! It's used to access properties and methods of the same object from inside its method.
+
+
 
 let student = {
   name: "Farhan",
