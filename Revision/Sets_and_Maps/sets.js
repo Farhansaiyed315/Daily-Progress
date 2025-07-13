@@ -33,3 +33,56 @@ console.log(" Duplicate, will be ignored",mySet);
 
 
 
+//! 2. How do you create a new Set in JavaScript?
+
+// You can create a new Set using the `Set` constructor.
+
+
+// Method 1: Create an empty Set
+
+const emptySet = new Set();
+console.log(emptySet);
+
+
+const numberSet = new Set([1,2,3,4,4,4,4,5,6,7]);
+console.log("duplicate 4 will be removed",numberSet)
+
+
+// can add values later using add()
+numberSet.add(9);
+console.log(numberSet);
+
+
+
+
+
+//! 3. How do you add elements to a Set?
+
+// already known 
+
+
+
+
+
+//! 4. How do you remove elements from a Set?
+
+// Use the `.delete()` method to remove a specific element from a Set.
+
+
+const numbers = new Set([1,2,3,4,5,6,7])
+numbers.delete(7)
+console.log(numbers)
+numbers.delete(10);
+console.log("numbres does not exist so nothing wil happens",numbers)
+
+
+//! 5. How do you check if a Set contains a certain value?
+
+
+// Use the `.has()` method to check if a value exists in the Set
+
+
+const colors = new Set(["red", "green", "blue"]);
+
+console.log(colors.has("green")); 
+console.log(colors.has("yellow")); 
