@@ -41,13 +41,13 @@
 
 //! 17. Convert a string like "farhan saiyed" to "Farhan Saiyed".
 
+//! 18. Split a sentence into an array of words. Then join it back with hyphens.
+
 
 
 
 //? Advanced Level (19–25)
 
-
-//! 18. Split a sentence into an array of words. Then join it back with hyphens.
 
 //! 19. Write a function that checks if a string is a palindrome.
 

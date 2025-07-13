@@ -185,5 +185,242 @@ function countVowels(str) {
 let input = "JavaScript is fun";
 let vowelCount = countVowels(input);
 
-console.log("Vowel count:", vowelCount); // Output: 5
+console.log("Vowel count:", vowelCount); 
+
+
+
+
+
+//? Intermediate Level (11–18)
+
+
+//! 11. Write a program to reverse a string without using built-in reverse()
+
+
+
+// We'll manually reverse a string by looping through it from the end to the beginning.
+
+function reverseString(str) {
+  let reversed = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+
+  return reversed;
+}
+
+// 🔹 Example:
+let input = "JavaScript";
+let output = reverseString(input);
+
+console.log("Reversed string:", output); 
+
+
+
+
+//! 12. How do you check if two strings are anagrams?
+
+
+// Two strings are anagrams if they contain the same characters in the same frequency,
+// but possibly in a different order.
+
+// 🔹 Steps:
+// 1. Remove spaces and convert both strings to lowercase.
+// 2. Split into characters, sort them, and join back.
+// 3. Compare the sorted strings.
+
+function isAnagram(str1, str2) {
+  let s1 = str1.replace(/\s/g, "").toLowerCase();
+  let s2 = str2.replace(/\s/g, "").toLowerCase();
+
+  if (s1.length !== s2.length) return false;
+
+  let sorted1 = s1.split("").sort().join("");
+  let sorted2 = s2.split("").sort().join("");
+
+  return sorted1 === sorted2;
+}
+
+// 🔹 Example:
+console.log(isAnagram("listen", "silent"));   // true
+console.log(isAnagram("hello", "world"));     // false
+console.log(isAnagram("School master", "The classroom")); // true
+
+
+
+
+//! 13. What is the difference between == and === when comparing strings?
+
+
+// In JavaScript:
+
+// - == is the loose equality operator. It compares two values after converting them to the same type.
+// - === is the strict equality operator. It checks both value and data type without converting.
+
+// 🔹 Example 1 (string vs number):
+let str = "123";
+let num = 123;
+
+console.log(str == num);  // true  → because "123" is converted to number
+console.log(str === num); // false → because one is string, other is number
+
+// 🔹 Example 2 (two same strings):
+let a = "hello";
+let b = "hello";
+
+console.log(a == b);  // true
+console.log(a === b); // true
+
+// ✅ Use === for strict comparison to avoid unexpected bugs.
+
+
+
+
+//! 14. Explain substring(), slice(), and substr() with examples.
+
+// ✅ Answer:
+
+// All three methods are used to extract parts of a string in JavaScript,
+// but they have some differences in how they work.
+
+// ---------------------------------------------
+// 🔹 1. substring(start, end)
+// - Extracts characters from start to end (not including end).
+// - If start > end, it swaps them.
+// - Does not accept negative indexes.
+
+let str1 = "JavaScript";
+
+console.log(str1.substring(0, 4)); // "Java"
+console.log(str1.substring(4, 0)); // "Java" (same as above, swapped)
+console.log(str1.substring(4, 10)); // "Script"
+console.log(str1.substring(-3, 4)); // "Java" (negative is treated as 0)
+
+// ---------------------------------------------
+// 🔹 2. slice(start, end)
+// - Similar to substring(), but supports negative indexes.
+// - Negative values count from the end of the string.
+
+let str2 = "JavaScript";
+
+console.log(str2.slice(0, 4));   // "Java"
+console.log(str2.slice(4));      // "Script"
+console.log(str2.slice(-6));     // "Script"
+console.log(str2.slice(-6, -3)); // "Scr"
+
+// ---------------------------------------------
+// 🔹 3. substr(start, length)
+// - Extracts `length` number of characters from `start` position.
+// - `start` can be negative (counting from end).
+// - This method is considered **legacy** but still works.
+
+let str3 = "JavaScript";
+
+console.log(str3.substr(0, 4));   // "Java"
+console.log(str3.substr(4, 6));   // "Script"
+console.log(str3.substr(-6, 3));  // "Scr"
+
+// ✅ Summary:
+// substring(start, end) → no negative values
+// slice(start, end)     → supports negative values
+// substr(start, length) → uses length, supports negative start (legacy)
+
+
+
+
+//! 15. Write a program that capitalizes the first letter of each word in a sentence.
+
+
+
+// This program will take a sentence and return it with each word's first letter capitalized.
+
+function capitalizeWords(sentence) {
+  let words = sentence.split(" ");
+
+  let capitalized = words.map(function(word) {
+    if (word.length === 0) return "";
+    return word[0].toUpperCase() + word.slice(1).toLowerCase();
+  });
+
+  return capitalized.join(" ");
+}
+
+// 🔹 Example:
+let input = "javascript is awesome";
+let output = capitalizeWords(input);
+
+console.log("Capitalized:", output); // "Javascript Is Awesome"
+
+
+
+
+//! 16. How do you replace a word in a string using replace()?
+
+
+// In JavaScript, the replace() method is used to replace part of a string with something else.
+// It only replaces the **first occurrence** unless you use a regular expression with the global flag.
+
+// 🔹 Syntax:
+string.replace(searchValue, newValue);
+
+// 🔹 Example 1: Replacing first occurrence
+let str = "JavaScript is awesome. JavaScript is fun.";
+let result = str.replace("JavaScript", "JS");
+
+console.log(result);
+// Output: "JS is awesome. JavaScript is fun."
+
+// 🔹 Example 2: Replace all occurrences using regex
+let replacedAll = str.replace(/JavaScript/g, "JS");
+
+console.log(replacedAll);
+// Output: "JS is awesome. JS is fun."
+
+
+
+
+//! 17. Convert a string like "farhan saiyed" to "Farhan Saiyed"
+
+
+
+// This program will capitalize the first letter of each word in the string.
+
+function toTitleCase(str) {
+  let words = str.split(" ");
+
+  let capitalized = words.map(function(word) {
+    if (word.length === 0) return "";
+    return word[0].toUpperCase() + word.slice(1).toLowerCase();
+  });
+
+  return capitalized.join(" ");
+}
+
+// 🔹 Example:
+let name = "farhan saiyed";
+let formattedName = toTitleCase(name);
+
+console.log(formattedName); // "Farhan Saiyed"
+
+
+
+//! 18. Split a sentence into an array of words. Then join it back with hyphens.
+
+
+
+// We'll use split() to break the sentence into words,
+// then use join() to combine them back using hyphens.
+
+let sentence = "JavaScript is fun to learn";
+
+let wordsArray = sentence.split(" "); // Split by space
+let joinedWithHyphens = wordsArray.join("-");
+
+console.log("Array of words:", wordsArray);
+console.log("Hyphen joined:", joinedWithHyphens);
+
+// Output:
+// Array of words: [ 'JavaScript', 'is', 'fun', 'to', 'learn' ]
+// Hyphen joined: JavaScript-is-fun-to-learn
 
