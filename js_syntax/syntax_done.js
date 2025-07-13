@@ -160,6 +160,21 @@ console.log(myMap.get("name"));
 
 
 
+// Example of a Set:
+const mySet = new Set();
+mySet.add(1);
+mySet.add(2);
+mySet.add(2); 
+console.log(" Duplicate, will be ignored",mySet); 
+
+// Example of Array:
+const myArray = [1, 2, 2];
+console.log(myArray); 
+
+
+
+
+
 //? String--------------------------------------------------------------------------------------
 
 let name1 = "Farhan";       // Double quotes
