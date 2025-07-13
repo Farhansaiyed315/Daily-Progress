@@ -93,7 +93,7 @@ userMap.set('city', 'Mumbai');
 
 // Get the value of a specific key using .get(key)
 const userName = userMap.get('name');
-console.log(userName); /
+console.log(userName); 
 
 const userCity = userMap.get('city');
 console.log(userCity); 
