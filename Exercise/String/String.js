@@ -76,7 +76,7 @@ console.log(name[10]); // undefined
 
 //! 6. What are string interpolation and template literals?
 
-//  Answer:
+
 
 // In JavaScript, template literals are a way to create strings using backticks (` `) instead of single ('') or double ("") quotes.
 
@@ -113,8 +113,8 @@ string.toLowerCase();
 // 🔹 Example:
 let text = "JavaScript";
 
-let upper = text.toUpperCase(); // "JAVASCRIPT"
-let lower = text.toLowerCase(); // "javascript"
+let upper = text.toUpperCase();
+let lower = text.toLowerCase(); 
 
 console.log("Uppercase:", upper);
 console.log("Lowercase:", lower);
@@ -134,8 +134,8 @@ function containsWord(sentence, word) {
 // 🔹 Example:
 let str = "JavaScript is a powerful language";
 
-console.log(containsWord(str, "powerful")); // true
-console.log(containsWord(str, "weak"));     // false
+console.log(containsWord(str, "powerful")); 
+console.log(containsWord(str, "weak"));    
 
 
 
@@ -243,9 +243,9 @@ function isAnagram(str1, str2) {
 }
 
 // 🔹 Example:
-console.log(isAnagram("listen", "silent"));   // true
-console.log(isAnagram("hello", "world"));     // false
-console.log(isAnagram("School master", "The classroom")); // true
+console.log(isAnagram("listen", "silent"));  
+console.log(isAnagram("hello", "world"));     
+console.log(isAnagram("School master", "The classroom")); 
 
 
 
@@ -279,7 +279,7 @@ console.log(a === b); // true
 
 //! 14. Explain substring(), slice(), and substr() with examples.
 
-// ✅ Answer:
+
 
 // All three methods are used to extract parts of a string in JavaScript,
 // but they have some differences in how they work.
@@ -321,7 +321,7 @@ console.log(str3.substr(0, 4));   // "Java"
 console.log(str3.substr(4, 6));   // "Script"
 console.log(str3.substr(-6, 3));  // "Scr"
 
-// ✅ Summary:
+//  Summary:
 // substring(start, end) → no negative values
 // slice(start, end)     → supports negative values
 // substr(start, length) → uses length, supports negative start (legacy)
@@ -424,3 +424,197 @@ console.log("Hyphen joined:", joinedWithHyphens);
 // Array of words: [ 'JavaScript', 'is', 'fun', 'to', 'learn' ]
 // Hyphen joined: JavaScript-is-fun-to-learn
 
+
+
+
+//! 19. Write a function that checks if a string is a palindrome.
+
+
+
+// A palindrome is a word or sentence that reads the same forward and backward.
+// We'll remove non-letter characters and make it case-insensitive before checking.
+
+function isPalindrome(str) {
+  // Remove spaces and non-alphanumeric characters, convert to lowercase
+  let cleanStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
+
+  // Reverse the cleaned string
+  let reversed = "";
+  for (let i = cleanStr.length - 1; i >= 0; i--) {
+    reversed += cleanStr[i];
+  }
+
+  // Check if original cleaned string is equal to reversed
+  return cleanStr === reversed;
+}
+
+// 🔹 Example:
+console.log(isPalindrome("madam"));            // true
+console.log(isPalindrome("racecar"));          // true
+console.log(isPalindrome("hello"));            // false
+console.log(isPalindrome("A man a plan a canal Panama")); // true
+
+
+
+
+
+//! 20. How to find the frequency of each character in a string?
+
+
+
+// We'll loop through the string and use an object to count how many times each character appears.
+
+function charFrequency(str) {
+  let freq = {};
+
+  for (let char of str) {
+    if (char === " ") continue; // skip spaces if needed
+    char = char.toLowerCase(); // optional: for case-insensitive counting
+
+    if (freq[char]) {
+      freq[char]++;
+    } else {
+      freq[char] = 1;
+    }
+  }
+
+  return freq;
+}
+
+// 🔹 Example:
+let input = "JavaScript";
+let result = charFrequency(input);
+
+console.log(result);
+// Output (example):
+// { j: 1, a: 2, v: 1, s: 1, c: 1, r: 1, i: 1, p: 1, t: 1 }
+
+
+
+
+//! 21. Extract the domain name from an email string. (e.g. "farhan@gmail.com" → "gmail.com")
+
+
+
+// We'll use the split() method to divide the email by "@" and take the part after it.
+
+function getDomain(email) {
+  return email.split("@")[1];
+}
+
+// 🔹 Example:
+let email = "farhan@gmail.com";
+let domain = getDomain(email);
+
+console.log("Domain:", domain); // Output: gmail.com
+
+
+
+
+//! 22. Write a function to compress a string using run-length encoding.
+//!     Example: "aaabbc" → "a3b2c1"
+
+
+
+// We'll loop through the string and count consecutive repeating characters,
+// then build the compressed result using character + count.
+
+function compressString(str) {
+  if (str.length === 0) return "";
+
+  let compressed = "";
+  let count = 1;
+
+  for (let i = 1; i <= str.length; i++) {
+    if (str[i] === str[i - 1]) {
+      count++;
+    } else {
+      compressed += str[i - 1] + count;
+      count = 1;
+    }
+  }
+
+  return compressed;
+}
+
+// 🔹 Example:
+let input = "aaabbc";
+let output = compressString(input);
+
+console.log("Compressed:", output); // Output: a3b2c1
+
+
+
+//! 23. Remove all duplicate characters from a string.
+
+
+// We'll loop through the string and build a new one by keeping only the first occurrence of each character.
+
+function removeDuplicates(str) {
+  let result = "";
+  let seen = new Set();
+
+  for (let char of str) {
+    if (!seen.has(char)) {
+      result += char;
+      seen.add(char);
+    }
+  }
+
+  return result;
+}
+
+// 🔹 Example:
+let input = "programming";
+let output = removeDuplicates(input);
+
+console.log("Without duplicates:", output); // Output: "progamin"
+
+
+
+//! 24. Write a function that finds the longest word in a sentence.
+
+
+
+// We'll split the sentence into words and compare their lengths to find the longest one.
+
+function findLongestWord(sentence) {
+  let words = sentence.split(" ");
+  let longest = "";
+
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+
+  return longest;
+}
+
+// 🔹 Example:
+let input = "JavaScript is a powerful programming language";
+let longestWord = findLongestWord(input);
+
+console.log("Longest word:", longestWord); // Output: programming
+
+
+
+//! 25. Explain how strings are immutable in JavaScript. Show with an example.
+
+
+// In JavaScript, **strings are immutable**, meaning their content cannot be changed after creation.
+
+// If you try to modify a character directly, it won't work.
+// Instead, any change creates a new string.
+
+// 🔹 Example:
+let str = "hello";
+
+// Attempting to change the first character
+str[0] = "H";
+
+console.log(str); // Output: "hello" — remains unchanged
+
+// To actually change a string, you must create a new one
+let newStr = "H" + str.slice(1);
+console.log(newStr); // Output: "Hello"
