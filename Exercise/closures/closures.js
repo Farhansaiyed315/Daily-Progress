@@ -99,4 +99,98 @@ const counter = createCounter();
 counter.increment();  // 1
 counter.increment();  // 2
 console.log(counter.getCount()); // 2
-// console.log(counter.count); // ❌ undefined (can't access directly)
+// console.log(counter.count); //  undefined (can't access directly)
+
+
+
+//! 4. Can a closure access variables from its outer scope even after the outer function has finished execution?
+
+/*
+ Yes, that's exactly what closures do!
+
+Even after the outer function finishes execution, the inner function (closure)
+**remembers** the variables from the outer function's scope.
+
+JavaScript uses something called **lexical scoping**, so the inner function keeps a reference to those variables.
+This is what allows closures to work.
+*/
+
+// Example:
+function outer() {
+  let message = "I am still here!";
+  
+  return function inner() {
+    console.log(message);
+  };
+}
+
+const sayMessage = outer(); // outer() runs and returns inner
+sayMessage(); // logs: I am still here!
+
+/*
+Explanation:
+- When `outer()` is called, it defines `message` and returns `inner()`.
+- Even though `outer()` has finished running, `inner()` still remembers `message`.
+- This is possible because of closure.
+*/
+
+
+
+//! 5. What is the output of this code and why?
+
+function greet() {
+  let name = "Farhan";
+  return function() {
+    console.log("Hello " + name);
+  };
+}
+
+const sayHello = greet();
+sayHello(); // ?
+
+/*
+ Output:
+Hello Farhan
+
+ Why?
+- When `greet()` is called, it creates a local variable `name = "Farhan"` and returns an inner function.
+- The returned function uses `name` from its outer scope.
+- Even though `greet()` has finished executing, the returned function still "remembers" the value of `name`.
+
+This is a perfect example of a **closure** — the function has access to the variables from its outer scope, even after that outer function is done running.
+*/
+
+
+
+//! 6. How does JavaScript handle closures inside a loop? What will this print and why?
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+
+/*
+ What will it print?
+
+ Output (after ~1 second):
+3
+3
+3
+
+Why?
+- `var` is function-scoped, NOT block-scoped.
+- So all three `setTimeout()` functions share the same `i` (from the same scope).
+- By the time the timeouts run (after 1 second), the loop is done and `i` is 3.
+- Each callback accesses the same `i` due to closure and sees `3`.
+
+This is a classic "closure inside a loop" problem!
+
+ How to fix it?
+Use `let` instead of `var` or wrap the `setTimeout` in a closure.
+
+ Using `let` makes a new `i` for every loop iteration:
+*/
+for (let i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i); /
