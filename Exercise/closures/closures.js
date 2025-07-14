@@ -31,6 +31,11 @@ greet(); // logs: Hello, Farhan
 
 
 
+
+
+
+
+
 //! 2. What will be the output of the following code?
 
 function outer() {
@@ -62,6 +67,14 @@ So the first `counter()` logs 1,
 and the second `counter()` logs 2,
 because they share the same `count` in closure scope.
 */
+
+
+
+
+
+
+
+
 
 
 
@@ -103,6 +116,16 @@ console.log(counter.getCount()); // 2
 
 
 
+
+
+
+
+
+
+
+
+
+
 //! 4. Can a closure access variables from its outer scope even after the outer function has finished execution?
 
 /*
@@ -136,6 +159,13 @@ Explanation:
 
 
 
+
+
+
+
+
+
+
 //! 5. What is the output of this code and why?
 
 function greet() {
@@ -159,6 +189,15 @@ Hello Farhan
 
 This is a perfect example of a **closure** — the function has access to the variables from its outer scope, even after that outer function is done running.
 */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,3 +233,196 @@ Use `let` instead of `var` or wrap the `setTimeout` in a closure.
 for (let i = 0; i < 3; i++) {
   setTimeout(function () {
     console.log(i); /
+
+
+
+
+
+
+
+
+    //! 7. Rewrite the code above using closures so that it prints 0, 1, and 2.
+
+for (var i = 0; i < 3; i++) {
+  (function (j) {
+    setTimeout(function () {
+      console.log(j);
+    }, 1000);
+  })(i);
+}
+
+/*
+Output (after 1 second):
+0
+1
+2
+
+ Why this works:
+- We use an IIFE (Immediately Invoked Function Expression) to create a new scope on each loop iteration.
+- The current value of `i` is passed as `j`, which becomes a local variable inside the IIFE.
+- Each `setTimeout` callback closes over its own copy of `j`, NOT the shared `i`.
+- So when the timeout runs, it logs the correct value (0, 1, then 2).
+
+ This is how we manually create closure-based scopes before `let` was introduced in ES6.
+
+ Bonus: Here's a cleaner version using `let` (modern JS):
+for (let i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+//! 8. Explain how closures are used to create private variables in JavaScript.
+
+/*
+ Closures allow us to create **private variables** in JavaScript — variables that can’t be accessed directly from outside a function.
+
+ How it works:
+You define variables inside a function, and return other functions that can access those variables.
+This way, the internal variables are hidden from the outside world, but still accessible to the returned functions via closure.
+
+This is super useful for:
+- Encapsulation
+- Hiding internal logic
+- Preventing direct modifications
+*/
+
+//  Example: Counter with private variable
+function createCounter() {
+  let count = 0; // private variable
+
+  return {
+    increment: function () {
+      count++;
+      console.log("Incremented:", count);
+    },
+    decrement: function () {
+      count--;
+      console.log("Decremented:", count);
+    },
+    getCount: function () {
+      return count;
+    }
+  };
+}
+
+const counter = createCounter();
+counter.increment();  // Incremented: 1
+counter.increment();  // Incremented: 2
+console.log(counter.getCount()); // 2
+
+//  count is private, can't access it directly
+console.log(counter.count); // undefined
+
+
+
+
+
+
+
+
+
+//! 9. What are potential memory issues with closures, and how can they be avoided?
+
+/*
+  Closures can cause **memory leaks** if not handled properly.
+
+Why? Because closures keep a reference to the outer scope's variables.
+If these references are held longer than needed (especially in long-lived objects or event listeners), they can **prevent garbage collection** and use up memory unnecessarily.
+
+  Common situations where memory issues happen:
+- Storing closures in global variables
+- Closures inside event listeners that are never removed
+- Unused closures inside timers or callbacks
+
+*/
+
+//  Bad: memory leak due to unremoved listener
+function setup() {
+  let hugeData = new Array(1000000).fill("fire");
+
+  document.getElementById("btn").addEventListener("click", function () {
+    console.log(hugeData[0]); // closure keeps reference to hugeData
+  });
+}
+
+setup();
+// If the event listener is not removed, `hugeData` stays in memory forever!
+
+// Solution: clean up properly
+function setupFixed() {
+  let hugeData = new Array(1000000).fill("tick");
+
+  const handler = function () {
+    console.log(hugeData[0]);
+  };
+
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click", handler);
+
+  // Later, when not needed
+  btn.removeEventListener("click", handler); // releases closure
+}
+
+/*
+  Tips to avoid memory issues with closures:
+- Remove event listeners when no longer needed.
+- Don’t store unnecessary data in closures.
+- Use weak references if supported (like WeakMap).
+- Avoid global closures unless truly needed.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+//! 10. Create a function createCounter(start) that returns two functions: one to increment and one to decrement the counter.
+//! Each function should maintain access to the same start value using closures.
+
+function createCounter(start) {
+  let count = start; // private variable inside closure
+
+  return {
+    increment: function () {
+      count++;
+      console.log("Increment:", count);
+    },
+    decrement: function () {
+      count--;
+      console.log("Decrement:", count);
+    }
+  };
+}
+
+const counter2 = createCounter(5);
+counter2.increment();   // Increment: 6
+counter2.decrement();   // Decrement: 5
+
+/*
+Explanation:
+- `createCounter` takes a starting number and stores it in `count`.
+- It returns an object with two methods: `increment` and `decrement`.
+- Both functions are closures that access and modify the same `count` variable.
+- The `count` value is private and can’t be accessed directly from outside.
+This demonstrates how closures are used to preserve shared state between multiple functions.
+*/
+
