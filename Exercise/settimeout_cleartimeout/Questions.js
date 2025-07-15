@@ -1,5 +1,5 @@
        //? Settimeout
-       
+
 //! 1. Use setTimeout to print "Welcome to JavaScript" after a 3-second delay.
 
 
@@ -13,3 +13,24 @@
 
 
 //! 5. Explain the difference between setTimeout and setInterval using a short example.
+
+
+
+
+
+
+//?         clearTimeout
+
+//! 1. Create a setTimeout that prints "Loading..." after 3 seconds, but cancel it using clearTimeout.
+
+
+//! 2. Declare a timeout that shows "Session expired" after 10 seconds. Add a button that cancels the timeout when clicked.
+
+
+//! 3. Set a timeout to show "Auto-save done" after 5 seconds. Also create a reset button that clears the timeout and starts a new one.
+
+
+//! 4. What happens if you call clearTimeout() with an invalid ID? Try it and log the result.
+
+
+//! 5. Explain the difference between setTimeout and clearTimeout with a working example.

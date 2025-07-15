@@ -84,3 +84,114 @@ setTimeout(() => {
 setInterval(() => {
   console.log("This runs every 2 seconds (setInterval)");
 }, 2000);
+
+
+
+
+
+
+
+//?         clearTimeout
+
+//! 1. Create a setTimeout that prints "Loading..." after 3 seconds, but cancel it using clearTimeout.
+
+const loadingTimeout = setTimeout(() => {
+  console.log("Loading...");
+}, 3000);
+
+clearTimeout(loadingTimeout); // Timeout is cancelled before it runs
+
+
+
+
+
+
+
+
+
+
+//! 2. Declare a timeout that shows "Session expired" after 10 seconds.
+//!    Add a button that cancels the timeout when clicked.
+
+const sessionTimeout = setTimeout(() => {
+  console.log("Session expired");
+}, 10000);
+
+const cancelButton = document.createElement("button");
+cancelButton.innerText = "Cancel Session Timeout";
+cancelButton.onclick = () => {
+  clearTimeout(sessionTimeout);
+  console.log("Session timeout cancelled");
+};
+document.body.appendChild(cancelButton);
+
+
+
+
+
+
+
+
+
+
+
+//! 3. Set a timeout to show "Auto-save done" after 5 seconds.
+//!    Also create a reset button that clears the timeout and starts a new one.
+
+let autoSaveTimeout;
+
+function startAutoSave() {
+  autoSaveTimeout = setTimeout(() => {
+    console.log("Auto-save done");
+  }, 5000);
+}
+
+startAutoSave(); // start once initially
+
+const resetButton = document.createElement("button");
+resetButton.innerText = "Reset Auto-Save Timer";
+resetButton.onclick = () => {
+  clearTimeout(autoSaveTimeout);
+  console.log("Auto-save timer reset");
+  startAutoSave(); // restart timer
+};
+document.body.appendChild(resetButton);
+
+
+
+
+
+
+
+
+
+
+//! 4. What happens if you call clearTimeout() with an invalid ID? Try it and log the result.
+
+clearTimeout(999); // No error, but nothing happens
+console.log("Cleared invalid timeout ID (no effect)"); // still runs without crashing
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! 5. Explain the difference between setTimeout and clearTimeout with a working example.
+
+/*
+  setTimeout schedules a task to run after a delay.
+  clearTimeout cancels it before it runs.
+*/
+const exampleTimeout = setTimeout(() => {
+  console.log("This will not run");
+}, 4000);
+
+clearTimeout(exampleTimeout); // Cancel before execution
+console.log("Timeout was cleared before it executed");
