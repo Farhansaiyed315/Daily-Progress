@@ -50,8 +50,33 @@ RECOMMENDED SEQUENCE OF LEARNING AFTER YOU COMPLETE THE COURSE ONCE
    Quiz App
    Weather App using API
 
+HTTP Methods: GET, POST, PUT, DELETE
 
+HTTP Status Codes
+
+
+
+
+
+| Covered? | Category           | You Need to Add/Review                              |
+| -------- | ------------------ | --------------------------------------------------- |
+| ✅        | Core JS            | You're solid here                                   |
+| ⚠️       | Advanced Internals | `this`, lexical scope, event loop, hoisting         |
+| ⚠️       | Browser            | debounce/throttle, form handling, DOM traversal     |
+| ✅        | API Handling       | You're doing great with fetch + JSON                |
+| 🔜       | Projects           | Make real mini-projects (todo, weather, search app) |
+| ⚠️       | Modules            | Learn about ES6 `import/export` for organization    |
+
+
+
+
+
+
+CORS (Cross-Origin Resource Sharing)
 
 Stay consistent, one topic at a time. Practice daily, build projects, and push to GitHub to track your journey.
 
 Happy Coding!
+
+
+
