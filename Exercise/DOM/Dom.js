@@ -2,6 +2,8 @@
 //! Beginner DOM Concepts
 //! ======================
 
+//? window object. 
+
 //! 1. What is the DOM?
 // DOM = Document Object Model
 // It's the structured representation of HTML elements that JavaScript can access and manipulate.
