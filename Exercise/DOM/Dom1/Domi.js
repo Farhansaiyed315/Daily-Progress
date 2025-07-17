@@ -150,10 +150,49 @@ console.dir(tag)
 // let name =   div.getAttribute("name");
 // console.log(name);
 
-let para = document.querySelector("p")
-console.log(para.setAttribute("class", "kaisa hai" ))
+// let para = document.querySelector("p")
+// console.log(para.setAttribute("class", "kaisa hai" ))
 
 
+
+
+
+//    //!   Styles
+
+//   para.style.backgroundColor = "green";
+
+//   para.innerText = "ha bhai change ho gaya";
+
+
+
+//!  Create an Element. 
+let newBtn = document.createElement("button");
+newBtn.innerText = 'click me here'; 
+
+console.log(newBtn);
+
+let div = document.querySelector("div");
+div.append(newBtn); 
+
+
+  //! Insert Element
+
+//   node.append(el) = adds at the end of node (inside)
+
+
+//   node.prepend(el) = adds at the start of node (inside)
+
+
+//   node.before(el) = adds before the node (outside)
+
+
+//   node.after(el) = adds after the node (outside)
+
+
+
+//!        Delete an Element.
+
+// node.remove()  = Removes the node
 
 
 
