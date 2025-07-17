@@ -1,17 +1,43 @@
-// Get element by id 
-let heading = document.getElementById("header");
-console.log(heading);
-console.dir(heading);
+
+
+                  //! Get element by id 
+
+
+// let heading = document.getElementById("header");
+// console.log(heading);
+// console.dir(heading);
 
 
 
-// Accessing by class name 
+
+
+
+
+
+
+
+
+                     //! Accessing by class name
+                     
+                     
 // Html collection is similar to array but not an array.
 let classs = document.getElementsByClassName("mericlass")
 console.log(classs);
  
 
-// Accessing by tagname. 
+
+
+
+
+
+
+
+
+
+
+
+
+                    //! Accessing by tagname. 
 
 let tag = document.getElementsByTagName("p")
 console.log(tag)
@@ -21,20 +47,44 @@ console.dir(tag)
 
 
 
-// Accessing by query selector. 
-
-let query = document.querySelector("h4");  // returns matching first element
-console.dir(query)
 
 
 
 
-let query = document.querySelectorAll("h4");   // for all matching
-console.dir(query)
 
 
 
-//! Properties 
+
+
+
+                  //! Accessing by query selector. 
+
+// let query = document.querySelector("h4");  // returns matching first element
+// console.dir(query)
+
+
+
+
+// let query = document.querySelectorAll("h4");   // for all matching
+// console.dir(query)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        //! Properties 
 
 // TagName :  returns tag for element nodes. 
 
@@ -48,8 +98,62 @@ console.dir(query)
 
 
 
+
+
+
+
+
+
+
+
+
+
 //! parent child siblings  Important mind mein hai 
 
 //! first child last child children padho jaan kr rakho. 
+
+
+// Attributes..
+
+// getting an attribute value. 
+
+// let div = document.querySelector("div")
+// console.log(div);
+
+// let id = div.getAttribute("id");
+// console.log(id)
+
+
+// let name =   div.getAttribute("name");
+// console.log(name);
+
+// let para = document.querySelector("p")
+// console.log(para.getAttribute("class"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  //!  Setting an attribut. 
+
+
+// let name =   div.getAttribute("name");
+// console.log(name);
+
+let para = document.querySelector("p")
+console.log(para.setAttribute("class", "kaisa hai" ))
+
+
+
 
 
