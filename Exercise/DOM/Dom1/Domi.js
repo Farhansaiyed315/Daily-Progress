@@ -195,4 +195,161 @@ div.append(newBtn);
 // node.remove()  = Removes the node
 
 
+// have to do appned child and remove child.
+
+
+
+
+
+
+
+
+
+
+//!    Events  handling. 
+
+//! event objects 
+
+
+
+//! Event listners.  // arraow function ki mazbooti chaihye. 
+
+
+
+const clickBtn = document.getElementById("clickBtn");
+const dblClickBtn = document.getElementById("dblClickBtn");
+const inputField = document.getElementById("inputField");
+const dropdown = document.getElementById("dropdown");
+const form = document.getElementById("myForm");
+
+// 1. click
+clickBtn.addEventListener("click", function() {
+  console.log("Button clicked");
+});
+
+
+
+
+// 2. dblclick
+dblClickBtn.addEventListener("dblclick", function() {
+  console.log("Button double-clicked");
+});
+
+
+
+
+
+
+// 3. mouseover
+clickBtn.addEventListener("mouseover", function() {
+  console.log("Mouse entered button area");
+});
+
+
+
+
+
+// 4. mouseout
+clickBtn.addEventListener("mouseout", function() {
+  console.log("Mouse left button area");
+});
+
+
+
+
+
+// 5. mousemove
+document.addEventListener("mousemove", function(event) {
+  console.log(`Mouse Position: X=${event.clientX}, Y=${event.clientY}`);
+});
+
+
+
+
+
+// 6. keydown
+document.addEventListener("keydown", function(e) {
+  console.log("Key Down:", e.key);
+});
+
+
+
+
+
+// 7. keyup
+document.addEventListener("keyup", function(e) {
+  console.log("Key Up:", e.key);
+});
+
+
+
+
+
+// 8. input
+inputField.addEventListener("input", function(e) {
+  console.log("Input value:", e.target.value);
+});
+
+
+
+
+
+// 9. change
+dropdown.addEventListener("change", function(e) {
+  console.log("Selected value:", e.target.value);
+});
+
+
+
+
+
+// 10. submit
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  console.log("Form submitted");
+});
+
+
+
+
+
+
+// 11. load
+window.addEventListener("load", function() {
+  console.log("Page fully loaded");
+});
+
+
+
+
+
+
+// 12. scroll
+window.addEventListener("scroll", function() {
+  console.log("User is scrolling");
+});
+
+
+
+
+
+
+// 13. resize
+window.addEventListener("resize", function() {
+  console.log("Window resized:", window.innerWidth, window.innerHeight);
+});
+
+
+
+
+
+// Bonus: shortcut syntax (not recommended)
+clickBtn.onclick = function() {
+  console.log("Shortcut: Button clicked");
+};
+
+
+
+
+
 
