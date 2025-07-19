@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgb(129, 193, 193);
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+
+.container{
+    background: green;
+}
