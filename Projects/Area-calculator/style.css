@@ -1,0 +1,51 @@
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+
+    background-color: green;
+    border-radius: 30px;
+    padding: 10px 100px 200px 100px;
+
+}
+
+
+.container h1 {
+    color: rgb(248, 248, 248);
+
+}
+
+
+
+.container label {
+
+    font-size: 20px;
+}
+
+
+
+.container select {
+
+    font-size: 20px;
+    background-color: rgb(171, 176, 181);
+    padding: 1px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+
+button {
+    
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+
+}
