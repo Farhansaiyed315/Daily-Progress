@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: rgba(243, 228, 243, 0.533);
+    background-color: rgb(218, 206, 218);
 }
 
 .wrapper {
@@ -57,7 +57,37 @@ border-bottom-color: rgb(173, 173, 230);
     cursor: pointer;
 }
 
+#products {
 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 1.5em;
+    padding: 2em 0;
+
+}
+
+
+.card {
+
+    background-color: #ffffff;
+    max-width: 18em;
+    margin-top: 1em;
+    border-radius: 6px;
+    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.09);
+}
+
+.image-container{
+    text-align: center;
+}
+
+
+img {
+
+    max-width: 100%;
+    object-fit: contain;
+    height: 15em;
+
+}
 
 
 
