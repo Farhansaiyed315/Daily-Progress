@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body{
+    background-color: rgba(243, 228, 243, 0.533);
+}
+
+.wrapper {
+    width: 95%;
+    margin:  0 auto;
+
+}
+
+#search-container{
+    margin: 1em;
+
+}
+
+#search-container input {
+    background-color: transparent;
+    width: 48%;
+    border-bottom: 2px solid black;
+    padding: 1em 0.3em;
+
+}
+
+#search-container input :focus{
+border-bottom-color: rgb(173, 173, 230);
+}
+
+
+
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: rgb(70, 70, 163);
+    border-radius: 6px;
+    margin-top: .5em;
+
+}
+
+
+.button-value {
+
+    border: 2px solid black;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+
+
+
+
