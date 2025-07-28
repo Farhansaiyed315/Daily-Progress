@@ -117,4 +117,140 @@ doMath
 
 
 
+
+
+
+
+
+  //! Q1: What is .then() in JavaScript?
+
+// .then() is used with Promises to handle the result when the Promise is successfully resolved.
+const promise = new Promise((resolve, reject) => {
+    resolve("Data loaded successfully ✅");
+});
+
+promise.then((message) => {
+    console.log(message); // Output: Data loaded successfully ✅
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q2: How to chain multiple .then() methods?
+
+const number = new Promise((resolve, reject) => {
+    resolve(5);
+});
+
+number
+  .then((num) => {
+    return num * 2; // 10
+  })
+  .then((result) => {
+    return result + 3; // 13
+  })
+  .then((finalResult) => {
+    console.log("Final result:", finalResult); // Output: Final result: 13
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q3: How does .then() handle asynchronous operations?
+
+const fetchData = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Fetched data after 1 second ⏳");
+    }, 1000);
+});
+
+fetchData.then((data) => {
+    console.log(data); // Output after 1 sec: Fetched data after 1 second ⏳
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Q4: What happens if an error occurs in a .then() chain?
+
+new Promise((resolve, reject) => {
+    resolve("Start");
+})
+  .then((msg) => {
+    console.log(msg); // Start
+    throw new Error("Something broke 💥");
+  })
+  .then(() => {
+    console.log("This won't run");
+  })
+  .catch((err) => {
+    console.log("Caught error:", err.message); // Output: Caught error: Something broke 💥
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
   
+
+//! Q5: Can .then() return another Promise?
+
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({ username: "Farhan" });
+        }, 1000);
+    });
+}
+
+getUser()
+  .then((user) => {
+    console.log("User fetched:", user); // Output: { username: 'Farhan' }
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Loading dashboard...");
+        }, 1000);
+    });
+  })
+  .then((msg) => {
+    console.log(msg); // Output after another 1 sec: Loading dashboard...
+  });
