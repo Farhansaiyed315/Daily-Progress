@@ -241,3 +241,53 @@ async function runSteps() {
 }
 
 runSteps();
+
+
+
+
+
+//? ----------- finally------------ 
+
+
+const pizzaOrder = new Promise((resolve, reject) => {
+    resolve("Pizza delivered! 🍕");
+});
+
+pizzaOrder
+  .then((msg) => {
+    console.log("Success:", msg);
+  })
+  .catch((err) => {
+    console.log("Error:", err);
+  })
+  .finally(() => {
+    console.log("Order process complete. ✅");
+  });
+
+// Output:
+// Success: Pizza delivered! 
+// Order process complete. 
+
+
+
+
+
+
+const pizzaOrder = new Promise((resolve, reject) => {
+    reject("Pizza store closed 😢");
+});
+
+pizzaOrder
+  .then((msg) => {
+    console.log("Success:", msg);
+  })
+  .catch((err) => {
+    console.log("Error:", err);
+  })
+  .finally(() => {
+    console.log("Order process complete. ✅");
+  });
+
+// Output:
+// Error: Pizza store closed 
+// Order process complete. 
