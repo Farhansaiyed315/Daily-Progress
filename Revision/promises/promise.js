@@ -62,3 +62,31 @@ promiseThree.then(function(user) {
 });
 
 
+
+
+
+
+
+
+const PromiseFour = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        let error = true;
+        if (!error) {
+            resolve({ username: "Farhan", email: "email.com" });
+        } else {
+            reject(`ERROR: Something went wrong`);
+        }
+    }, 1000);
+});
+
+PromiseFour
+.then((user) => {
+    console.log(user); // Logs the whole user object
+    return user.username; // Accessing the username property
+})
+.then((username) => {
+    console.log(username); // Logs just the username
+})
+.catch(function(error) {
+    console.log(error); // Catches and logs any error
+});
