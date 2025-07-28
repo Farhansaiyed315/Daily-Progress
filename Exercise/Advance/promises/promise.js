@@ -250,7 +250,7 @@ runSteps();
 
 
 const pizzaOrder = new Promise((resolve, reject) => {
-    resolve("Pizza delivered! 🍕");
+    resolve("Pizza delivered! ");
 });
 
 pizzaOrder
@@ -274,7 +274,7 @@ pizzaOrder
 
 
 const pizzaOrder = new Promise((resolve, reject) => {
-    reject("Pizza store closed 😢");
+    reject("Pizza store closed ");
 });
 
 pizzaOrder
@@ -285,7 +285,7 @@ pizzaOrder
     console.log("Error:", err);
   })
   .finally(() => {
-    console.log("Order process complete. ✅");
+    console.log("Order process complete. ");
   });
 
 // Output:
