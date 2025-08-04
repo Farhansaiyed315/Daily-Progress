@@ -10,7 +10,7 @@ console.log(typeof(arr));
 
 //! 2. Declare an array with more than 5 number of elements
 
-const arrname  = ["Farhan", "Faizan", 22, "Blind spot ","Dutch"];
+const arrname1  = ["Farhan", "Faizan", 22, "Blind spot ","Dutch"];
 console.log(arrname);
 
 //! 3. Find the length of your array
