@@ -6,39 +6,38 @@ RECOMMENDED SEQUENCE OF LEARNING AFTER YOU COMPLETE THE COURSE ONCE
 
    Beginner Core Concepts
 
-1. ConsoleObjectModel
-2. Boolean
-3. Conditionals
-4. Loops
-5. Functions
-6. HigerOrderFunction (Higher Order Functions)
-7. Callbackfunc
+1. ConsoleObjectModel------------done
+2. Boolean ----------------------done
+3. Conditionals------------------done
+4. Loops-------------------------done
+5. Functions---------------------done
+6. HigerOrderFunction (Higher Order Functions)-------done
+7. Callbackfunc                                      done
 
  🔄 Intermediate Core Concepts
 
-8.  Array
-9.  String
-10. Objects
-11. Destructor
-12. Sets\_Maps
-13. ErrorHandling
-
+8.  Array-----------------------------done
+9.  String----------------------------done
+10. Objects---------------------------done
+11. Destructor------------------------done
+12. Sets\_Maps------------------------done
+13. ErrorHandling----------------------done
  🔥 Advanced JavaScript Concepts
 
 14. Closures
 15. Classes
-16.1 SetTimeout and  ClearTimeout
-16.2 SetInterval
-16.4 Promises - fech api - async await.
-17. Async\_Await
+16.1 SetTimeout and  ClearTimeout-------done
+16.2 SetInterval -----------------------done
+16.4 Promises - fech api - async await.--done
+17. Async\_Await-------------------------done
 18. RegularExpression
-19. JSON
+19. JSON---------------------------------done
 
  🌐 DOM + Browser API
 
-20. Dom1
-21. Dom2
-22. Event\_Listeners
+20. Dom1 -------------------------------done
+21. Dom2--------------------------------done
+22. Event\_Listeners--------------------done
 23. Web\_storage
 
 
