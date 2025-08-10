@@ -53,5 +53,36 @@ li{
     gap: 0.6rem;
     border-radius: 15px;
     
-
 }
+
+
+li .text {
+  flex: 1;
+  word-break: break-word;
+}
+
+li.completed .text {
+  text-decoration: line-through;
+  color: #6b7280;
+  opacity: 0.9;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+
+
