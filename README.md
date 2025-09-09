@@ -9,7 +9,7 @@ This repo is a personal coding journal where I track my **daily coding practice*
 
 - ✅ Daily coding practice
 - 📚 Notes and mini-projects
-- 💡 Problem-solving using JavaScript, Python, etc.
+- 💡 Problem-solving using JavaScript, Python, 
 - 🔁 Consistent learning updates
 
 ---
